@@ -1,4 +1,3 @@
-Essay-Maker-Windows-Forms
+ESSAY MAKER 0.3
 =========================
-
-Windows Forms Essay Maker
+Go to our website at the top of the page!
