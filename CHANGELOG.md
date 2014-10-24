@@ -1,6 +1,27 @@
 CHANGELOG
 =========
-V1 - The Initial Version
-------------------------
+V0.1 - Essay Maker Scratch
+--------------------------
+You can find it here: http://sargeant45.wix.com/essaymaker
+
+V0.2 - The "Input Output" Essay Maker
+-------------------------------------
+You can find it here:
+https://github.com/sargeant45/Essay-Maker
+- Ran in C# Command Prompt!
+- Copied to the clipboard!
+- Didn't support formatting!
+- Totally primitive!
+
+V0.3 - The Initial Version
+--------------------------
 - Added all of the essay elements.
 - Added copy button.
+
+V0.4 - Essay Maker BAMF-RTF
+---------------------------
+- Added a .RTF save button, and kept the copy button just in case :)
+- Added essay elements that make sense. (expository 5-paragraph essay)
+- Added tooltips for every part of the essay, replacing the names.
+- Whole new layout!
+- Works on smaller sized monitors!
