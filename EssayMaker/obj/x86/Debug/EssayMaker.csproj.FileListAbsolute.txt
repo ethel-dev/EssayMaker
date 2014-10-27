@@ -7,3 +7,4 @@ C:\Documents and Settings\admin\my documents\visual studio 2010\Projects\EssayMa
 C:\Documents and Settings\admin\my documents\visual studio 2010\Projects\EssayMaker\EssayMaker\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Documents and Settings\admin\my documents\visual studio 2010\Projects\EssayMaker\EssayMaker\obj\x86\Debug\EssayMaker.exe
 C:\Documents and Settings\admin\my documents\visual studio 2010\Projects\EssayMaker\EssayMaker\obj\x86\Debug\EssayMaker.pdb
+C:\Documents and Settings\admin\my documents\visual studio 2010\Projects\EssayMaker\EssayMaker\obj\x86\Debug\Essay.Form2.resources
