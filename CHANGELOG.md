@@ -32,5 +32,6 @@ V0.4.1 - Editing Features!
 - Added an Accepts Tab switch. Now you can tab away to format!
 - Speaking of tabs, with the switch off you can do the opposite! Tab order fixed.
 - Added anchors that kind of work.
-### Known Bugs
+
+<h3>Known Bugs</h3>
 - Accepts Tab switch will not switch back.
