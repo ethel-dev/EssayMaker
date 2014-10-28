@@ -6,13 +6,13 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using System.Threading;
 using System.Media;
 
 namespace Essay
 {
     public partial class Form1 : Form
     {
+        //INITIALIZE
         public Form1()
         {
             InitializeComponent();
@@ -21,8 +21,11 @@ namespace Essay
             MinimizeBox = false;
             string d = DateTime.Now.ToString("M/d/yyyy");
             date.Text = d;
+            label3.Hide();
+            label3.Text = "Saved!";
             
         }
+        //TOOLTIPS
         private void Form1_Load(object sender, EventArgs e)
         {
             // Tooltips
@@ -50,7 +53,7 @@ namespace Essay
 
             everyExplanation.SetToolTip(this.comboBox1, "Change the organizer's font. This will NOT change the font of the output.");
         }
-
+        //SAVE
         public void button1_Click(object sender, EventArgs e)
         {
             string[] alltextboxes = {name.Text + Environment.NewLine + 
@@ -67,15 +70,16 @@ namespace Essay
                 string path = saveFileDialog1.FileName;
                 System.IO.File.WriteAllLines(path, alltextboxes);
             }
-            
+            warning2();
         }
-
+        //COPY
         private void button2_Click(object sender, EventArgs e)
         {
             string alltextboxes = (name.Text + Environment.NewLine + teacherName.Text + Environment.NewLine + date.Text + Environment.NewLine + thesis.Text + Environment.NewLine + topicSentence1.Text + Environment.NewLine + examples1.Text + Environment.NewLine + concludingSentence1.Text + Environment.NewLine + topicSentence2.Text + Environment.NewLine + examples2.Text + Environment.NewLine + concludingSentence2.Text + Environment.NewLine + topicSentence3.Text + Environment.NewLine + examples3.Text + Environment.NewLine + concludingSentence3.Text + Environment.NewLine + conclusion.Text);
             Clipboard.SetText(alltextboxes, TextDataFormat.Rtf);
+            warning1();
         }
-
+        //FONT
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if(comboBox1.SelectedIndex == 0)
@@ -174,17 +178,7 @@ namespace Essay
                 
             }
         }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        //TABS
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox1.Checked)
@@ -211,10 +205,67 @@ namespace Essay
             }
             else
             {
+                // Top and Bottom
+                thesis.AcceptsTab = false;
+                conclusion.AcceptsTab = false;
 
+                // Topic Sentences
+                topicSentence1.AcceptsTab = false;
+                topicSentence2.AcceptsTab = false;
+                topicSentence3.AcceptsTab = false;
+
+                // Examples
+                examples1.AcceptsTab = false;
+                examples2.AcceptsTab = false;
+                examples3.AcceptsTab = false;
+
+                // Concluding Sentence
+                concludingSentence1.AcceptsTab = false;
+                concludingSentence2.AcceptsTab = false;
+                concludingSentence3.AcceptsTab = false;
             }
         }
-
+        //NIGHTMODE
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox2.Checked)
+            {
+                this.BackColor = SystemColors.ControlDarkDark;
+                this.ForeColor = Color.DarkGray;
+            }
+            else
+            {
+                this.BackColor = SystemColors.Control;
+                this.ForeColor = Color.Black;
+            }
+        }
+        //CONFIRMATIONS
+        public void warning1()
+        {
+            label3.Text = "Copied!";
+            label3.Show();
+            var t = new Timer();
+            t.Interval = 3000; // it will Tick in 3 seconds
+            t.Tick += (s, e) =>
+            {
+                label3.Hide();
+                t.Stop();
+            };
+            t.Start();
+        }
+        public void warning2()
+        {
+            label3.Text = "Saved!";
+            label3.Show();
+            var t = new Timer();
+            t.Interval = 3000; // it will Tick in 3 seconds
+            t.Tick += (s, e) =>
+            {
+                label3.Hide();
+                t.Stop();
+            };
+            t.Start();
+        }
         
     }
 }
