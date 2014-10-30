@@ -51,130 +51,197 @@ namespace Essay
             everyExplanation.SetToolTip(this.concludingSentence2, "Concluding Sentence: Conclude your paragraph and repeat the topic sentence.");
             everyExplanation.SetToolTip(this.concludingSentence3, "Concluding Sentence: Conclude your paragraph and repeat the topic sentence.");
 
-            everyExplanation.SetToolTip(this.comboBox1, "Change the organizer's font. This will NOT change the font of the output.");
+            everyExplanation.SetToolTip(this.comboBox1, "Change the font. This will change the saved and copied file font.");
         }
         //SAVE
         public void button1_Click(object sender, EventArgs e)
         {
-            string[] alltextboxes = {name.Text + Environment.NewLine + 
-                                    teacherName.Text + Environment.NewLine + 
-                                    date.Text + Environment.NewLine + thesis.Text + Environment.NewLine +
-                                    topicSentence1.Text + Environment.NewLine + 
-                                    examples1.Text + Environment.NewLine + concludingSentence1.Text + Environment.NewLine + topicSentence2.Text + Environment.NewLine + examples2.Text + Environment.NewLine + concludingSentence2.Text + Environment.NewLine + topicSentence3.Text + Environment.NewLine + examples3.Text + Environment.NewLine + concludingSentence3.Text + Environment.NewLine + conclusion.Text};
+            #region SetText
             
+            richTextBox2.AppendText(name.Text + Environment.NewLine +
+                                    teacherName.Text + Environment.NewLine + date.Text + Environment.NewLine);
+            richTextBox1.AppendText(richTextBox2.Text + Environment.NewLine + thesis.Text + Environment.NewLine +
+                                    topicSentence1.Text + Environment.NewLine +
+                                    examples1.Text + Environment.NewLine + concludingSentence1.Text + Environment.NewLine + topicSentence2.Text + Environment.NewLine + examples2.Text + Environment.NewLine + concludingSentence2.Text + Environment.NewLine + topicSentence3.Text + Environment.NewLine + examples3.Text + Environment.NewLine + concludingSentence3.Text + Environment.NewLine + conclusion.Text);
+                                    
+            #endregion
+            int fontSelection = comboBox1.SelectedIndex;
+            int fontSize = Convert.ToInt32(numericUpDown1.Value);
+            int line1start = richTextBox1.GetFirstCharIndexFromLine(0);
+            int line3end = richTextBox1.GetFirstCharIndexFromLine(4);
+            richTextBox1.Select(line1start, line3end);
+            richTextBox1.SelectionAlignment = HorizontalAlignment.Right;
+            switch (fontSelection)
+            {
+                case 0:
+                    richTextBox1.SelectAll();
+                    richTextBox1.SelectionFont = new Font("Times New Roman", fontSize);
+                    richTextBox1.DeselectAll();
+                    break;
+                case 1:
+                    richTextBox1.SelectAll();
+                    richTextBox1.SelectionFont = new Font("Arial", fontSize);
+                    richTextBox1.DeselectAll();
+                    break;
+                case 2:
+                    richTextBox1.SelectAll();
+                    richTextBox1.SelectionFont = new Font("Courier New", fontSize);
+                    richTextBox1.DeselectAll();
+                    break;
+                case 3:
+                    richTextBox1.SelectAll();
+                    richTextBox1.SelectionFont = new Font("Comic Sans MS", fontSize);
+                    richTextBox1.DeselectAll();
+                    break;
+                case 4:
+                    richTextBox1.SelectAll();
+                    richTextBox1.SelectionFont = new Font("Cambria", fontSize);
+                    richTextBox1.DeselectAll();
+                    break;
+            }
             saveFileDialog1.DefaultExt = "*.rtf";
             saveFileDialog1.Filter = "Rich Text Format (.rtf)|*.rtf";
             if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK &&
                 saveFileDialog1.FileName.Length > 0)
             {
-                string path = saveFileDialog1.FileName;
-                System.IO.File.WriteAllLines(path, alltextboxes);
+                // Save the contents of the RichTextBox into the file.
+                richTextBox1.SaveFile(saveFileDialog1.FileName);
+
             }
             warning2();
         }
         //COPY
         private void button2_Click(object sender, EventArgs e)
         {
-            string alltextboxes = (name.Text + Environment.NewLine + teacherName.Text + Environment.NewLine + date.Text + Environment.NewLine + thesis.Text + Environment.NewLine + topicSentence1.Text + Environment.NewLine + examples1.Text + Environment.NewLine + concludingSentence1.Text + Environment.NewLine + topicSentence2.Text + Environment.NewLine + examples2.Text + Environment.NewLine + concludingSentence2.Text + Environment.NewLine + topicSentence3.Text + Environment.NewLine + examples3.Text + Environment.NewLine + concludingSentence3.Text + Environment.NewLine + conclusion.Text);
-            Clipboard.SetText(alltextboxes, TextDataFormat.Rtf);
+            #region SetText
+
+            richTextBox1.Text = (name.Text + Environment.NewLine +
+                                    teacherName.Text + Environment.NewLine +
+                                    date.Text + Environment.NewLine + thesis.Text + Environment.NewLine +
+                                    topicSentence1.Text + Environment.NewLine +
+                                    examples1.Text + Environment.NewLine + concludingSentence1.Text + Environment.NewLine + topicSentence2.Text + Environment.NewLine + examples2.Text + Environment.NewLine + concludingSentence2.Text + Environment.NewLine + topicSentence3.Text + Environment.NewLine + examples3.Text + Environment.NewLine + concludingSentence3.Text + Environment.NewLine + conclusion.Text);
+            #endregion
+            int fontSelection = comboBox1.SelectedIndex;
+            int fontSize = Convert.ToInt32(numericUpDown1.Value);
+            switch (fontSelection)
+            {
+                case 0:
+                    richTextBox1.Font = new Font("Times New Roman", fontSize);
+                    break;
+                case 1:
+                    richTextBox1.Font = new Font("Arial", fontSize);
+                    break;
+                case 2:
+                    richTextBox1.Font = new Font("Courier New", fontSize);
+                    break;
+                case 3:
+                    richTextBox1.Font = new Font("Comic Sans MS", fontSize);
+                    break;
+                case 4:
+                    richTextBox1.Font = new Font("Cambria", fontSize);
+                    break;
+            }
+            
+            Clipboard.SetText(richTextBox1.Rtf, TextDataFormat.Rtf);
             warning1();
         }
         //FONT
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            int fontSize = Convert.ToInt32(topicSentence1.Font.Size);
             if(comboBox1.SelectedIndex == 0)
             {
-                topicSentence1.Font = new Font("Times New Roman", 9);
-                topicSentence2.Font = new Font("Times New Roman", 9);
-                topicSentence3.Font = new Font("Times New Roman", 9);
+                topicSentence1.Font = new Font("Times New Roman", fontSize);
+                topicSentence2.Font = new Font("Times New Roman", fontSize);
+                topicSentence3.Font = new Font("Times New Roman", fontSize);
 
-                examples1.Font = new Font("Times New Roman", 9);
-                examples2.Font = new Font("Times New Roman", 9);
-                examples3.Font = new Font("Times New Roman", 9);
+                examples1.Font = new Font("Times New Roman", fontSize);
+                examples2.Font = new Font("Times New Roman", fontSize);
+                examples3.Font = new Font("Times New Roman", fontSize);
 
-                concludingSentence1.Font = new Font("Times New Roman", 9);
-                concludingSentence1.Font = new Font("Times New Roman", 9);
-                concludingSentence1.Font = new Font("Times New Roman", 9);
+                concludingSentence1.Font = new Font("Times New Roman", fontSize);
+                concludingSentence1.Font = new Font("Times New Roman", fontSize);
+                concludingSentence1.Font = new Font("Times New Roman", fontSize);
 
-                conclusion.Font = new Font("Times New Roman", 9);
-                thesis.Font = new Font("Times New Roman", 9);
-                name.Font = new Font("Times New Roman", 9);
-                teacherName.Font = new Font("Times New Roman", 9);
-                date.Font = new Font("Times New Roman", 9);
+                conclusion.Font = new Font("Times New Roman", fontSize);
+                thesis.Font = new Font("Times New Roman", fontSize);
+                name.Font = new Font("Times New Roman", fontSize);
+                teacherName.Font = new Font("Times New Roman", fontSize);
+                date.Font = new Font("Times New Roman", fontSize);
                 
             }
             if (comboBox1.SelectedIndex == 1)
             {
-                topicSentence1.Font = new Font("Arial", 9);
-                topicSentence2.Font = new Font("Arial", 9);
-                topicSentence3.Font = new Font("Arial", 9);
+                topicSentence1.Font = new Font("Arial", fontSize);
+                topicSentence2.Font = new Font("Arial", fontSize);
+                topicSentence3.Font = new Font("Arial", fontSize);
 
-                examples1.Font = new Font("Arial", 9);
-                examples2.Font = new Font("Arial", 9);
-                examples3.Font = new Font("Arial", 9);
+                examples1.Font = new Font("Arial", fontSize);
+                examples2.Font = new Font("Arial", fontSize);
+                examples3.Font = new Font("Arial", fontSize);
 
-                concludingSentence1.Font = new Font("Arial", 9);
-                concludingSentence1.Font = new Font("Arial", 9);
-                concludingSentence1.Font = new Font("Arial", 9);
+                concludingSentence1.Font = new Font("Arial", fontSize);
+                concludingSentence1.Font = new Font("Arial", fontSize);
+                concludingSentence1.Font = new Font("Arial", fontSize);
 
-                conclusion.Font = new Font("Arial", 9);
-                thesis.Font = new Font("Arial", 9);
+                conclusion.Font = new Font("Arial", fontSize);
+                thesis.Font = new Font("Arial", fontSize);
                 
                 
 
             }
             if (comboBox1.SelectedIndex == 2)
             {
-                topicSentence1.Font = new Font("Courier New", 9);
-                topicSentence2.Font = new Font("Courier New", 9);
-                topicSentence3.Font = new Font("Courier New", 9);
+                topicSentence1.Font = new Font("Courier New", fontSize);
+                topicSentence2.Font = new Font("Courier New", fontSize);
+                topicSentence3.Font = new Font("Courier New", fontSize);
 
-                examples1.Font = new Font("Courier New", 9);
-                examples2.Font = new Font("Courier New", 9);
-                examples3.Font = new Font("Courier New", 9);
+                examples1.Font = new Font("Courier New", fontSize);
+                examples2.Font = new Font("Courier New", fontSize);
+                examples3.Font = new Font("Courier New", fontSize);
 
-                concludingSentence1.Font = new Font("Courier New", 9);
-                concludingSentence1.Font = new Font("Courier New", 9);
-                concludingSentence1.Font = new Font("Courier New", 9);
+                concludingSentence1.Font = new Font("Courier New", fontSize);
+                concludingSentence1.Font = new Font("Courier New", fontSize);
+                concludingSentence1.Font = new Font("Courier New", fontSize);
 
-                conclusion.Font = new Font("Courier New", 9);
-                thesis.Font = new Font("Courier New", 9);
+                conclusion.Font = new Font("Courier New", fontSize);
+                thesis.Font = new Font("Courier New", fontSize);
                 
             }
             if (comboBox1.SelectedIndex == 3)
             {
-                topicSentence1.Font = new Font("Comic Sans MS", 9);
-                topicSentence2.Font = new Font("Comic Sans MS", 9);
-                topicSentence3.Font = new Font("Comic Sans MS", 9);
+                topicSentence1.Font = new Font("Comic Sans MS", fontSize);
+                topicSentence2.Font = new Font("Comic Sans MS", fontSize);
+                topicSentence3.Font = new Font("Comic Sans MS", fontSize);
 
-                examples1.Font = new Font("Comic Sans MS", 9);
-                examples2.Font = new Font("Comic Sans MS", 9);
-                examples3.Font = new Font("Comic Sans MS", 9);
+                examples1.Font = new Font("Comic Sans MS", fontSize);
+                examples2.Font = new Font("Comic Sans MS", fontSize);
+                examples3.Font = new Font("Comic Sans MS", fontSize);
 
-                concludingSentence1.Font = new Font("Comic Sans MS", 9);
-                concludingSentence1.Font = new Font("Comic Sans MS", 9);
-                concludingSentence1.Font = new Font("Comic Sans MS", 9);
+                concludingSentence1.Font = new Font("Comic Sans MS", fontSize);
+                concludingSentence1.Font = new Font("Comic Sans MS", fontSize);
+                concludingSentence1.Font = new Font("Comic Sans MS", fontSize);
 
-                conclusion.Font = new Font("Comic Sans MS", 9);
-                thesis.Font = new Font("Comic Sans MS", 9);
+                conclusion.Font = new Font("Comic Sans MS", fontSize);
+                thesis.Font = new Font("Comic Sans MS", fontSize);
                 
             }
             if (comboBox1.SelectedIndex == 4)
             {
-                topicSentence1.Font = new Font("Cambria", 10);
-                topicSentence2.Font = new Font("Cambria", 10);
-                topicSentence3.Font = new Font("Cambria", 10);
+                topicSentence1.Font = new Font("Cambria", fontSize);
+                topicSentence2.Font = new Font("Cambria", fontSize);
+                topicSentence3.Font = new Font("Cambria", fontSize);
 
-                examples1.Font = new Font("Cambria", 10);
-                examples2.Font = new Font("Cambria", 10);
-                examples3.Font = new Font("Cambria", 10);
+                examples1.Font = new Font("Cambria", fontSize);
+                examples2.Font = new Font("Cambria", fontSize);
+                examples3.Font = new Font("Cambria", fontSize);
 
-                concludingSentence1.Font = new Font("Cambria", 10);
-                concludingSentence1.Font = new Font("Cambria", 10);
-                concludingSentence1.Font = new Font("Cambria", 10);
+                concludingSentence1.Font = new Font("Cambria", fontSize);
+                concludingSentence1.Font = new Font("Cambria", fontSize);
+                concludingSentence1.Font = new Font("Cambria", fontSize);
 
-                conclusion.Font = new Font("Cambria", 10);
-                thesis.Font = new Font("Cambria", 10);
+                conclusion.Font = new Font("Cambria", fontSize);
+                thesis.Font = new Font("Cambria", fontSize);
                 
             }
         }
@@ -265,6 +332,26 @@ namespace Essay
                 t.Stop();
             };
             t.Start();
+        }
+        //FONTSIZE
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            int fontSize = Convert.ToInt32(numericUpDown1.Value);
+            topicSentence1.Font = new Font(topicSentence1.Font.FontFamily, fontSize);
+            topicSentence2.Font = new Font(topicSentence1.Font.FontFamily, fontSize);
+            topicSentence3.Font = new Font(topicSentence1.Font.FontFamily, fontSize);
+
+            examples1.Font = new Font(topicSentence1.Font.FontFamily, fontSize);
+            examples2.Font = new Font(topicSentence1.Font.FontFamily, fontSize);
+            examples3.Font = new Font(topicSentence1.Font.FontFamily, fontSize);
+
+            concludingSentence1.Font = new Font(topicSentence1.Font.FontFamily, fontSize);
+            concludingSentence1.Font = new Font(topicSentence1.Font.FontFamily, fontSize);
+            concludingSentence1.Font = new Font(topicSentence1.Font.FontFamily, fontSize);
+
+            conclusion.Font = new Font(topicSentence1.Font.FontFamily, fontSize);
+            thesis.Font = new Font(topicSentence1.Font.FontFamily, fontSize);
+
         }
         
     }

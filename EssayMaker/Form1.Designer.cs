@@ -49,18 +49,22 @@
             this.topicSentence3 = new System.Windows.Forms.RichTextBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.fontDialog1 = new System.Windows.Forms.FontDialog();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,6 +73,7 @@
             this.thesis.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.thesis.BackColor = System.Drawing.SystemColors.Window;
+            this.thesis.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.thesis.Location = new System.Drawing.Point(11, 82);
             this.thesis.Name = "thesis";
             this.thesis.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
@@ -80,6 +85,7 @@
             // 
             this.conclusion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
+            this.conclusion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.conclusion.Location = new System.Drawing.Point(12, 409);
             this.conclusion.Name = "conclusion";
             this.conclusion.Size = new System.Drawing.Size(541, 96);
@@ -90,11 +96,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label1.Location = new System.Drawing.Point(543, 0);
+            this.label1.Location = new System.Drawing.Point(555, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 17);
+            this.label1.Size = new System.Drawing.Size(113, 17);
             this.label1.TabIndex = 12;
-            this.label1.Text = "Essay Maker 0.4.2";
+            this.label1.Text = "Essay Maker 0.5";
             // 
             // name
             // 
@@ -144,6 +150,7 @@
             // 
             this.concludingSentence1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)));
+            this.concludingSentence1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.concludingSentence1.Location = new System.Drawing.Point(6, 187);
             this.concludingSentence1.Name = "concludingSentence1";
             this.concludingSentence1.Size = new System.Drawing.Size(162, 44);
@@ -154,6 +161,7 @@
             // 
             this.examples1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)));
+            this.examples1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.examples1.Location = new System.Drawing.Point(6, 76);
             this.examples1.Name = "examples1";
             this.examples1.Size = new System.Drawing.Size(162, 105);
@@ -164,6 +172,7 @@
             // 
             this.topicSentence1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)));
+            this.topicSentence1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.topicSentence1.Location = new System.Drawing.Point(6, 21);
             this.topicSentence1.Name = "topicSentence1";
             this.topicSentence1.Size = new System.Drawing.Size(162, 49);
@@ -186,6 +195,7 @@
             // concludingSentence2
             // 
             this.concludingSentence2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.concludingSentence2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.concludingSentence2.Location = new System.Drawing.Point(6, 186);
             this.concludingSentence2.Name = "concludingSentence2";
             this.concludingSentence2.Size = new System.Drawing.Size(162, 44);
@@ -195,6 +205,7 @@
             // examples2
             // 
             this.examples2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.examples2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.examples2.Location = new System.Drawing.Point(6, 75);
             this.examples2.Name = "examples2";
             this.examples2.Size = new System.Drawing.Size(162, 105);
@@ -204,6 +215,7 @@
             // topicSentence2
             // 
             this.topicSentence2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.topicSentence2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.topicSentence2.Location = new System.Drawing.Point(6, 21);
             this.topicSentence2.Name = "topicSentence2";
             this.topicSentence2.Size = new System.Drawing.Size(162, 49);
@@ -228,6 +240,7 @@
             // 
             this.concludingSentence3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Right)));
+            this.concludingSentence3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.concludingSentence3.Location = new System.Drawing.Point(6, 186);
             this.concludingSentence3.Name = "concludingSentence3";
             this.concludingSentence3.Size = new System.Drawing.Size(162, 44);
@@ -238,6 +251,7 @@
             // 
             this.examples3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Right)));
+            this.examples3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.examples3.Location = new System.Drawing.Point(6, 75);
             this.examples3.Name = "examples3";
             this.examples3.Size = new System.Drawing.Size(162, 105);
@@ -248,6 +262,7 @@
             // 
             this.topicSentence3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Right)));
+            this.topicSentence3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.topicSentence3.Location = new System.Drawing.Point(6, 21);
             this.topicSentence3.Name = "topicSentence3";
             this.topicSentence3.Size = new System.Drawing.Size(162, 49);
@@ -257,7 +272,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(5, 150);
+            this.checkBox1.Location = new System.Drawing.Point(5, 172);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(101, 21);
             this.checkBox1.TabIndex = 17;
@@ -265,6 +280,30 @@
             this.toolTip1.SetToolTip(this.checkBox1, "This will allow you to use the Tab key to format text.");
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(46, 144);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            72,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Minimum = new decimal(new int[] {
+            7,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(60, 22);
+            this.numericUpDown1.TabIndex = 20;
+            this.toolTip1.SetToolTip(this.numericUpDown1, "Change the font size.");
+            this.numericUpDown1.Value = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // saveFileDialog1
             // 
@@ -280,6 +319,7 @@
             this.button1.TabIndex = 14;
             this.button1.TabStop = false;
             this.button1.Text = "Save";
+            this.toolTip1.SetToolTip(this.button1, "Save the essay to a Rich Text Format file.");
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -293,12 +333,15 @@
             this.button2.TabIndex = 15;
             this.button2.TabStop = false;
             this.button2.Text = "Copy";
+            this.toolTip1.SetToolTip(this.button2, "Copy the textboxes to your clipboard.");
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.numericUpDown1);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.checkBox2);
             this.panel1.Controls.Add(this.checkBox1);
@@ -308,8 +351,37 @@
             this.panel1.Controls.Add(this.button2);
             this.panel1.Location = new System.Drawing.Point(559, 20);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(109, 207);
+            this.panel1.Size = new System.Drawing.Size(109, 219);
             this.panel1.TabIndex = 14;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(5, 146);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 17);
+            this.label4.TabIndex = 21;
+            this.label4.Text = "Size";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(27, 45);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(51, 17);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "Saved!";
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(5, 195);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(102, 21);
+            this.checkBox2.TabIndex = 18;
+            this.checkBox2.Text = "Night Mode";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // label2
             // 
@@ -336,25 +408,25 @@
             this.comboBox1.Text = "Font";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // checkBox2
+            // richTextBox1
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(5, 178);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(102, 21);
-            this.checkBox2.TabIndex = 18;
-            this.checkBox2.Text = "Night Mode";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            this.richTextBox1.Location = new System.Drawing.Point(11, 12);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(395, 22);
+            this.richTextBox1.TabIndex = 15;
+            this.richTextBox1.TabStop = false;
+            this.richTextBox1.Text = "";
+            this.richTextBox1.Visible = false;
             // 
-            // label3
+            // richTextBox2
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(27, 45);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 17);
-            this.label3.TabIndex = 19;
-            this.label3.Text = "Saved!";
+            this.richTextBox2.Location = new System.Drawing.Point(11, 34);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.Size = new System.Drawing.Size(395, 22);
+            this.richTextBox2.TabIndex = 16;
+            this.richTextBox2.TabStop = false;
+            this.richTextBox2.Text = "";
+            this.richTextBox2.Visible = false;
             // 
             // Form1
             // 
@@ -362,6 +434,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(668, 529);
+            this.Controls.Add(this.richTextBox2);
+            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -373,11 +447,12 @@
             this.Controls.Add(this.conclusion);
             this.Controls.Add(this.thesis);
             this.Name = "Form1";
-            this.Text = "Essay Maker 0.4.2";
+            this.Text = "Essay Maker 0.5";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -411,11 +486,14 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.FontDialog fontDialog1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox richTextBox2;
     }
 }
 
