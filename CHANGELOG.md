@@ -35,3 +35,12 @@ V0.4.1 - Editing Features!
 
 <h3>Known Bugs</h3>
 - Accepts Tab switch will not switch back.
+
+V0.5 - The Save Update
+----------------------
+- Now the Font button will affect your saved file too!
+- New Size upDownNumeric box (that uppy downy counter thingy) to change fontsize.
+- Copy button has fonts!
+- Save button now right aligns your name, teacher's name, and the date. (copy button DOES NOT due to laziness. I don't know, open up an issue if you want it)
+- Pull request from *cusmonaut* that removes files that should have been removed from .gitignore. Thanks!
+- Save button revamped! Code completely changed and works 30 times faster and formatting sticks, like I've said before.
