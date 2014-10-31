@@ -96,6 +96,7 @@
                           Margin="2" Width="120"/>
 
                 <CheckBox Content="Allow Tabs"
+                          IsChecked="{Binding AcceptsTab}"
                           Foreground="{DynamicResource IdealForegroundColorBrush}"
                           Grid.Row="2" Grid.Column="1" Margin="2"/>
 
