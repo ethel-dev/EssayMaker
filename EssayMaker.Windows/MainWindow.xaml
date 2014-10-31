@@ -18,7 +18,6 @@
                     ToolTip="Essay" ToolTipService.InitialShowDelay="0">
                 <TextBlock FontFamily="/#Segoe UI Symbol Regular" Text="&#xE1D3;" FontSize="16"/>
             </ToggleButton>
-
         </metro:WindowCommands>
         
     </metro:MetroWindow.RightWindowCommands>

@@ -31,6 +31,8 @@
         
         <TextBox Text="{Binding Thesis}" AcceptsReturn="True"
                  metro:TextboxHelper.Watermark="Thesis"
+                 FontFamily="{Binding DataContext.FontFamily,RelativeSource={RelativeSource AncestorType=Window}}"
+                 FontSize="{Binding DataContext.FontSize, RelativeSource={RelativeSource AncestorType=Window}}"
                  Grid.Row="2" Margin="2"/>
                  
         <ItemsControl ItemsSource="{Binding Topics}"
@@ -60,14 +62,20 @@
                         
                         <TextBox Text="{Binding Sentence}" AcceptsReturn="True"
                                  metro:TextboxHelper.Watermark="Topic Sentence"
+                                 FontFamily="{Binding DataContext.FontFamily,RelativeSource={RelativeSource AncestorType=Window}}"
+                                 FontSize="{Binding DataContext.FontSize, RelativeSource={RelativeSource AncestorType=Window}}"
                                  Grid.Row="1" Margin="2"/>
                         
                         <TextBox Text="{Binding Examples}" AcceptsReturn="True"
                                  metro:TextboxHelper.Watermark="Examples"
+                                 FontFamily="{Binding DataContext.FontFamily,RelativeSource={RelativeSource AncestorType=Window}}"
+                                 FontSize="{Binding DataContext.FontSize, RelativeSource={RelativeSource AncestorType=Window}}"
                                  Grid.Row="2" Margin="2"/>
 
                         <TextBox Text="{Binding ConcludingSentence}" AcceptsReturn="True"
                                  metro:TextboxHelper.Watermark="Concluding Sentence"
+                                 FontFamily="{Binding DataContext.FontFamily,RelativeSource={RelativeSource AncestorType=Window}}"
+                                 FontSize="{Binding DataContext.FontSize, RelativeSource={RelativeSource AncestorType=Window}}"
                                  Grid.Row="3" Margin="2"/>
                     </Grid>
                 </DataTemplate>
@@ -76,6 +84,8 @@
 
         <TextBox Text="{Binding Conclusion}" AcceptsReturn="True"
                  metro:TextboxHelper.Watermark="Conclusion"
+                 FontFamily="{Binding DataContext.FontFamily,RelativeSource={RelativeSource AncestorType=Window}}"
+                 FontSize="{Binding DataContext.FontSize, RelativeSource={RelativeSource AncestorType=Window}}"
                  Grid.Row="4" Margin="2"/>
 
 

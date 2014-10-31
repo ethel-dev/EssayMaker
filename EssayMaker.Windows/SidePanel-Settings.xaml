@@ -3,8 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             mc:Ignorable="d" d:DesignHeight="300" d:DesignWidth="300"
+             x:Name="Control">
     <UserControl.Resources>
         <Ellipse x:Key="AppThemeMenuIcon"
                      x:Shared="False"
@@ -51,10 +51,10 @@
                               Background="Transparent"
                               Margin="5" VerticalAlignment="Stretch" HorizontalAlignment="Left">
                 <MenuItem Header="Theme" Padding="5,1,5,1"
-                                      ItemsSource="{Binding AppThemes, ElementName=Window}"
+                                      ItemsSource="{Binding AppThemes, ElementName=Control}"
                                       ItemContainerStyle="{StaticResource AppThemeMenuItemStyle}" />
                 <MenuItem Header="Accent" Padding="5,1,5,1"
-                                      ItemsSource="{Binding AccentColors, ElementName=Window}"
+                                      ItemsSource="{Binding AccentColors, ElementName=Control}"
                                       ItemContainerStyle="{StaticResource AccentColorMenuItemStyle}" />
             </Menu>
         </GroupBox>
@@ -73,31 +73,31 @@
                 </Grid.ColumnDefinitions>
 
                 <TextBlock Text="Font Type:"
-                                       Foreground="{DynamicResource IdealForegroundColorBrush}"
-                                       Grid.Row="0" Grid.Column="0"/>
-
-                <ComboBox ItemsSource="{Binding Source={x:Static Fonts.SystemFontFamilies}}"
-                                      Grid.Row="0" Grid.Column="1" 
-                                      Margin="2" Width="120">
+                           Foreground="{DynamicResource IdealForegroundColorBrush}"
+                           Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"/>
+                <ComboBox ItemsSource="{Binding FontFamilies}"
+                          SelectedItem="{Binding FontFamily}"
+                          Grid.Row="0" Grid.Column="1" 
+                          Margin="2" Width="120">
                     <ComboBox.ItemTemplate>
                         <DataTemplate>
                             <TextBlock Text="{Binding}"
-                                               FontFamily="{Binding}"/>
+                                       FontFamily="{Binding}"/>
                         </DataTemplate>
                     </ComboBox.ItemTemplate>
                 </ComboBox>
 
                 <TextBlock Text="Font Size:"
-                                       Foreground="{DynamicResource IdealForegroundColorBrush}"
-                                       Grid.Row="1" Grid.Column="0"/>
-                <ComboBox Grid.Row="1" Grid.Column="1" 
-                                      Margin="2" Width="120">
-
-                </ComboBox>
+                           Foreground="{DynamicResource IdealForegroundColorBrush}"
+                           Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"/>
+                <ComboBox ItemsSource="{Binding FontSizes}"
+                          SelectedItem="{Binding FontSize}"
+                          Grid.Row="1" Grid.Column="1" 
+                          Margin="2" Width="120"/>
 
                 <CheckBox Content="Allow Tabs"
-                                      Foreground="{DynamicResource IdealForegroundColorBrush}"
-                                      Grid.Row="2" Grid.Column="1" Margin="2"/>
+                          Foreground="{DynamicResource IdealForegroundColorBrush}"
+                          Grid.Row="2" Grid.Column="1" Margin="2"/>
 
             </Grid>
         </GroupBox>

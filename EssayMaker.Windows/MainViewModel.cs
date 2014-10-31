@@ -18,6 +18,8 @@ namespace EssayMaker.Windows
     {
         private Essay _model;
         private string _title;
+        private string _fontFamily;
+        private int _fontSize;
 
         public MainViewModel()
         {
@@ -27,6 +29,9 @@ namespace EssayMaker.Windows
             Save = new SimpleCommand(OnSave);
             SaveAs = new SimpleCommand(OnSaveAs);
             Export = new SimpleCommand(OnExport);
+
+            FontSize = 12;
+            FontFamily = "Segoe UI";
 
             OnNewEssay();
         }
@@ -42,6 +47,36 @@ namespace EssayMaker.Windows
         }
 
         public string FilePath { get; set; }
+
+        public List<string> FontFamilies
+        {
+            get { return Fonts.SystemFontFamilies.Select(x => x.ToString()).OrderBy(x => x).ToList(); }
+        }
+
+        public string FontFamily
+        {
+            get { return _fontFamily; }
+            set
+            {
+                _fontFamily = value;
+                NotifyPropertyChange();
+            }
+        }
+
+        public List<int> FontSizes
+        {
+            get { return Enumerable.Range(5, 67).ToList(); }
+        }
+
+        public int FontSize
+        {
+            get { return _fontSize; }
+            set
+            {
+                _fontSize = value;
+                NotifyPropertyChange();
+            }
+        }
 
         public Essay Model
         {

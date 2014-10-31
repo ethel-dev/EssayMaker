@@ -1,17 +1,8 @@
-﻿using System;
+﻿using MahApps.Metro;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace EssayMaker.Windows
 {
@@ -20,8 +11,21 @@ namespace EssayMaker.Windows
     /// </summary>
     public partial class SidePanel_Settings : UserControl
     {
+        public List<AccentColorMenuData> AccentColors { get; set; }
+        public List<AppThemeMenuData> AppThemes { get; set; }
+
         public SidePanel_Settings()
         {
+            // create accent color menu items
+            this.AccentColors = ThemeManager.Accents
+                .Select(a => new AccentColorMenuData() { Name = a.Name, ColorBrush = a.Resources["AccentColorBrush"] as Brush })
+                .ToList();
+
+            // create metro theme color menu items
+            this.AppThemes = ThemeManager.AppThemes
+                .Select(a => new AppThemeMenuData() { Name = a.Name, BorderColorBrush = a.Resources["BlackColorBrush"] as Brush, ColorBrush = a.Resources["WhiteColorBrush"] as Brush })
+                .ToList();
+
             InitializeComponent();
         }
     }
