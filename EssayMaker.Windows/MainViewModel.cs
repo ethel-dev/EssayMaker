@@ -20,6 +20,7 @@ namespace EssayMaker.Windows
         private string _title;
         private string _fontFamily;
         private int _fontSize;
+        private bool _acceptsTab;
 
         public MainViewModel()
         {
@@ -30,7 +31,7 @@ namespace EssayMaker.Windows
             SaveAs = new SimpleCommand(OnSaveAs);
             Export = new SimpleCommand(OnExport);
 
-            FontSize = 12;
+            FontSize = 14;
             FontFamily = "Segoe UI";
 
             OnNewEssay();
@@ -74,6 +75,16 @@ namespace EssayMaker.Windows
             set
             {
                 _fontSize = value;
+                NotifyPropertyChange();
+            }
+        }
+
+        public bool AcceptsTab
+        {
+            get { return _acceptsTab; }
+            set
+            {
+                _acceptsTab = value;
                 NotifyPropertyChange();
             }
         }

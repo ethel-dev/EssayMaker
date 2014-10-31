@@ -33,6 +33,7 @@
                  metro:TextboxHelper.Watermark="Thesis"
                  FontFamily="{Binding DataContext.FontFamily,RelativeSource={RelativeSource AncestorType=Window}}"
                  FontSize="{Binding DataContext.FontSize, RelativeSource={RelativeSource AncestorType=Window}}"
+                 AcceptsTab="{Binding DataContext.AcceptsTab, RelativeSource={RelativeSource AncestorType=Window}}"
                  Grid.Row="2" Margin="2"/>
                  
         <ItemsControl ItemsSource="{Binding Topics}"
@@ -58,24 +59,29 @@
                         
                         <TextBox Text="{Binding Title}"
                                  Foreground="{DynamicResource AccentColorBrush}"
+                                 FontFamily="{Binding DataContext.FontFamily,RelativeSource={RelativeSource AncestorType=Window}}"
+                                 FontSize="{Binding DataContext.FontSize, RelativeSource={RelativeSource AncestorType=Window}}"
                                  Margin="2"/>
                         
                         <TextBox Text="{Binding Sentence}" AcceptsReturn="True"
                                  metro:TextboxHelper.Watermark="Topic Sentence"
                                  FontFamily="{Binding DataContext.FontFamily,RelativeSource={RelativeSource AncestorType=Window}}"
                                  FontSize="{Binding DataContext.FontSize, RelativeSource={RelativeSource AncestorType=Window}}"
+                                 AcceptsTab="{Binding DataContext.AcceptsTab, RelativeSource={RelativeSource AncestorType=Window}}"
                                  Grid.Row="1" Margin="2"/>
                         
                         <TextBox Text="{Binding Examples}" AcceptsReturn="True"
                                  metro:TextboxHelper.Watermark="Examples"
                                  FontFamily="{Binding DataContext.FontFamily,RelativeSource={RelativeSource AncestorType=Window}}"
                                  FontSize="{Binding DataContext.FontSize, RelativeSource={RelativeSource AncestorType=Window}}"
+                                 AcceptsTab="{Binding DataContext.AcceptsTab, RelativeSource={RelativeSource AncestorType=Window}}"
                                  Grid.Row="2" Margin="2"/>
 
                         <TextBox Text="{Binding ConcludingSentence}" AcceptsReturn="True"
                                  metro:TextboxHelper.Watermark="Concluding Sentence"
                                  FontFamily="{Binding DataContext.FontFamily,RelativeSource={RelativeSource AncestorType=Window}}"
                                  FontSize="{Binding DataContext.FontSize, RelativeSource={RelativeSource AncestorType=Window}}"
+                                 AcceptsTab="{Binding DataContext.AcceptsTab, RelativeSource={RelativeSource AncestorType=Window}}"
                                  Grid.Row="3" Margin="2"/>
                     </Grid>
                 </DataTemplate>
