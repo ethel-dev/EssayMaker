@@ -1,0 +1,48 @@
+﻿<metro:MetroWindow x:Class="EssayMaker.Windows.MainWindow"
+                   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                   xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
+                   xmlns:local="clr-namespace:EssayMaker.Windows"
+                   BorderBrush="{DynamicResource AccentColorBrush}" BorderThickness="1"
+                   GlowBrush="{DynamicResource AccentColorBrush}" NonActiveGlowBrush="DarkGray"
+                   WindowStartupLocation="CenterScreen" MinHeight="700" MinWidth="1000"
+                   Title="{Binding Title}" x:Name="Window">
+    <metro:MetroWindow.RightWindowCommands>
+        <metro:WindowCommands>
+            <ToggleButton x:Name="ToolsButton"
+                    ToolTip="Settings" ToolTipService.InitialShowDelay="0">
+                <TextBlock FontFamily="/#Segoe UI Symbol Regular" Text="&#xE115;" FontSize="16"/>
+            </ToggleButton>
+
+            <ToggleButton x:Name="FileMenuButton"
+                    ToolTip="Essay" ToolTipService.InitialShowDelay="0">
+                <TextBlock FontFamily="/#Segoe UI Symbol Regular" Text="&#xE1D3;" FontSize="16"/>
+            </ToggleButton>
+        </metro:WindowCommands>
+        
+    </metro:MetroWindow.RightWindowCommands>
+
+    <metro:MetroWindow.Flyouts>
+        <metro:FlyoutsControl>
+            <metro:Flyout Header="Settings" IsOpen="{Binding IsChecked,ElementName=ToolsButton}"
+                          Position="Right"
+                          Theme="Accent">
+                <local:SidePanel_Settings/>
+            </metro:Flyout>
+
+            <metro:Flyout Header="Essay" IsOpen="{Binding IsChecked,ElementName=FileMenuButton}"
+                          Position="Right"
+                          Theme="Accent">
+                <local:SidePanel_Essay/>
+            </metro:Flyout>
+        </metro:FlyoutsControl>
+    </metro:MetroWindow.Flyouts>
+    
+    <Grid>
+        <local:EssayView DataContext="{Binding Model}"/>
+        <ResizeGrip HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+    </Grid>
+    
+    
+    
+</metro:MetroWindow>
