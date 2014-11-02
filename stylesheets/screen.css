@@ -360,7 +360,7 @@ footer span.octocat {
   height: 50px;
   margin: 0 auto;
 }
-body .essaymakerfull{
+body span.essaymakerfull{
   background: transparent url(http://i.imgur.com/94yEtvO.png) 0 0 no-repeat;
   display: block;
   width: 340px;
@@ -370,7 +370,7 @@ body .essaymakerfull{
     white-space:nowrap;
   margin: 0 auto;
 }
-body .essaymakerlite {
+body span.essaymakerlite {
   background: transparent url(http://i.imgur.com/0hSEse4.png) 0 0 no-repeat;
   display: block;
   width: 340px;
