@@ -360,18 +360,24 @@ footer span.octocat {
   height: 50px;
   margin: 0 auto;
 }
-body .essaymakerfull:before {
+body .essaymakerfull{
   background: transparent url(http://i.imgur.com/94yEtvO.png) 0 0 no-repeat;
   display: block;
   width: 340px;
   height: 340px;
+  overflow:hidden;
+    text-indent:100%;
+    white-space:nowrap;
   margin: 0 auto;
 }
-body .essaymakerlite:before {
+body .essaymakerlite {
   background: transparent url(http://i.imgur.com/0hSEse4.png) 0 0 no-repeat;
   display: block;
   width: 340px;
   height: 340px;
+  overflow:hidden;
+    text-indent:100%;
+    white-space:nowrap;
   margin: 0 auto;
 }
 
