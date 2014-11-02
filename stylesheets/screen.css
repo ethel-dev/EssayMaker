@@ -360,6 +360,20 @@ footer span.octocat {
   height: 50px;
   margin: 0 auto;
 }
+body span.essaymakerfull {
+  background: transparent url(http://i.imgur.com/vVE8lUF.png) 0 0 no-repeat;
+  display: block;
+  width: 640px;
+  height: 640px;
+  margin: 0 auto;
+}
+body span.essaymakerlite {
+  background: transparent url(http://i.imgur.com/fLKhX7g.png) 0 0 no-repeat;
+  display: block;
+  width: 640px;
+  height: 640px;
+  margin: 0 auto;
+}
 
 /* content */
 
