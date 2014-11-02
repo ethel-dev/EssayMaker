@@ -431,6 +431,7 @@ img {
   max-width: 640px;
   margin: 0px auto;
   transform: scale(0.5,0.5);
+  align="center";
 }
 
 hr {
