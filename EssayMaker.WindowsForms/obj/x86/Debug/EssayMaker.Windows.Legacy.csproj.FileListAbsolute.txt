@@ -1,9 +1,0 @@
-C:\Users\ethan_000\git\EssayMaker3\EssayMaker.WindowsForms\bin\Debug\EssayMaker.exe
-C:\Users\ethan_000\git\EssayMaker3\EssayMaker.WindowsForms\bin\Debug\EssayMaker.pdb
-C:\Users\ethan_000\git\EssayMaker3\EssayMaker.WindowsForms\obj\x86\Debug\EssayMaker.Windows.Legacy.csprojResolveAssemblyReference.cache
-C:\Users\ethan_000\git\EssayMaker3\EssayMaker.WindowsForms\obj\x86\Debug\Essay.Form1.resources
-C:\Users\ethan_000\git\EssayMaker3\EssayMaker.WindowsForms\obj\x86\Debug\Essay.Form2.resources
-C:\Users\ethan_000\git\EssayMaker3\EssayMaker.WindowsForms\obj\x86\Debug\Essay.Properties.Resources.resources
-C:\Users\ethan_000\git\EssayMaker3\EssayMaker.WindowsForms\obj\x86\Debug\EssayMaker.Windows.Legacy.csproj.GenerateResource.Cache
-C:\Users\ethan_000\git\EssayMaker3\EssayMaker.WindowsForms\obj\x86\Debug\EssayMaker.exe
-C:\Users\ethan_000\git\EssayMaker3\EssayMaker.WindowsForms\obj\x86\Debug\EssayMaker.pdb
