@@ -297,6 +297,32 @@ footer span.ribbon-inner {
   padding: 1px;
   z-index: 1;
 }
+.container {
+    position: relative;
+    width: 500px;
+}
+.container div {
+    height: 300px;
+}
+
+.column-left {
+    width: 33%;
+    left: 0;
+    background: #00F;
+    position: absolute;
+}
+.column-center {
+    width: 34%;
+    background: #933;
+    margin-left: 33%;
+    position: absolute;
+}
+.column-right {
+    width: 33%;
+    right: 0;
+    position: absolute;
+    background: #999;
+}
 
 footer p {
   font-family: 'Open Sans', Myriad, Calibri, sans-serif;
