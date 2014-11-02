@@ -16,7 +16,7 @@ namespace EssayMaker.Core
             set
             {
                 _title = value;
-                NotifyPropertyChange();
+                NotifyPropertyChange(() => Title);
             }
         }
 
@@ -27,7 +27,7 @@ namespace EssayMaker.Core
             set
             {
                 _sentence = value;
-                NotifyPropertyChange();
+                NotifyPropertyChange(() => Sentence);
             }
         }
 
@@ -38,7 +38,7 @@ namespace EssayMaker.Core
             set
             {
                 _examples = value;
-                NotifyPropertyChange();
+                NotifyPropertyChange(() => Examples);
             }
         }
 
@@ -49,7 +49,7 @@ namespace EssayMaker.Core
             set
             {
                 _concludingSentence = value;
-                NotifyPropertyChange();
+                NotifyPropertyChange(() => ConcludingSentence);
             }
         }
     }

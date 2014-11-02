@@ -1,0 +1,114 @@
+﻿<UserControl x:Class="EssayMaker.Windows.EssayView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
+             xmlns:essay="clr-namespace:EssayMaker.Core"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d" d:DesignHeight="500" d:DesignWidth="900" 
+             d:DataContext="{d:DesignInstance essay:Essay}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height=".2*"/>
+            <RowDefinition Height=".6*"/>
+            <RowDefinition Height=".2*"/>
+        </Grid.RowDefinitions> 
+        
+        <TextBox Text="{Binding Title}" Foreground="{DynamicResource AccentColorBrush}"
+                 metro:TextboxHelper.Watermark="Title"
+                 FontFamily="Segoe UI light" FontSize="36" 
+                 Grid.Row="0" Margin="2"/>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="160"/>
+            </Grid.ColumnDefinitions>
+            
+            <TextBox Text="{Binding Author}"
+                 metro:TextboxHelper.Watermark="Author"
+                 FontFamily="Segoe UI Light" FontSize="20"
+                 Grid.Column="0" Margin="2"/>
+
+            <TextBox Text="{Binding TeacherName}"
+                 metro:TextboxHelper.Watermark="Teacher Name"
+                 FontFamily="Segoe UI Light" FontSize="20"
+                 Grid.Column="1" Margin="2"/>
+            
+            <DatePicker SelectedDate="{Binding Date}"
+                        metro:TextboxHelper.Watermark="Date"
+                        FontFamily="Segoe UI Light" FontSize="18"
+                        Grid.Column="2" Margin="2"/>
+        </Grid>
+        
+        
+        <TextBox Text="{Binding Thesis}" AcceptsReturn="True"
+                 metro:TextboxHelper.Watermark="Thesis"
+                 FontFamily="{Binding DataContext.FontFamily,RelativeSource={RelativeSource AncestorType=Window}}"
+                 FontSize="{Binding DataContext.FontSize, RelativeSource={RelativeSource AncestorType=Window}}"
+                 AcceptsTab="{Binding DataContext.AcceptsTab, RelativeSource={RelativeSource AncestorType=Window}}"
+                 Grid.Row="2" Margin="2"/>
+                 
+        <ItemsControl ItemsSource="{Binding Topics}"
+                      Grid.Row="3">
+            <ItemsControl.Template>
+                <ControlTemplate TargetType="ItemsControl">
+                    <ScrollViewer HorizontalScrollBarVisibility="Auto"
+                                  VerticalScrollBarVisibility="Disabled">
+                        <UniformGrid IsItemsHost="True"
+                                    Rows="1"/>
+                    </ScrollViewer>
+                </ControlTemplate>
+            </ItemsControl.Template>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Grid d:DataContext="{d:DesignInstance essay:EssayTopic}">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height=".25*"/>
+                            <RowDefinition Height=".5*"/>
+                            <RowDefinition Height=".25*"/>
+                        </Grid.RowDefinitions>
+                        
+                        <TextBox Text="{Binding Title}"
+                                 Foreground="{DynamicResource AccentColorBrush}"
+                                 FontFamily="{Binding DataContext.FontFamily,RelativeSource={RelativeSource AncestorType=Window}}"
+                                 FontSize="{Binding DataContext.FontSize, RelativeSource={RelativeSource AncestorType=Window}}"
+                                 Margin="2"/>
+                        
+                        <TextBox Text="{Binding Sentence}" AcceptsReturn="True"
+                                 metro:TextboxHelper.Watermark="Topic Sentence"
+                                 FontFamily="{Binding DataContext.FontFamily,RelativeSource={RelativeSource AncestorType=Window}}"
+                                 FontSize="{Binding DataContext.FontSize, RelativeSource={RelativeSource AncestorType=Window}}"
+                                 AcceptsTab="{Binding DataContext.AcceptsTab, RelativeSource={RelativeSource AncestorType=Window}}"
+                                 Grid.Row="1" Margin="2"/>
+                        
+                        <TextBox Text="{Binding Examples}" AcceptsReturn="True"
+                                 metro:TextboxHelper.Watermark="Examples"
+                                 FontFamily="{Binding DataContext.FontFamily,RelativeSource={RelativeSource AncestorType=Window}}"
+                                 FontSize="{Binding DataContext.FontSize, RelativeSource={RelativeSource AncestorType=Window}}"
+                                 AcceptsTab="{Binding DataContext.AcceptsTab, RelativeSource={RelativeSource AncestorType=Window}}"
+                                 Grid.Row="2" Margin="2"/>
+
+                        <TextBox Text="{Binding ConcludingSentence}" AcceptsReturn="True"
+                                 metro:TextboxHelper.Watermark="Concluding Sentence"
+                                 FontFamily="{Binding DataContext.FontFamily,RelativeSource={RelativeSource AncestorType=Window}}"
+                                 FontSize="{Binding DataContext.FontSize, RelativeSource={RelativeSource AncestorType=Window}}"
+                                 AcceptsTab="{Binding DataContext.AcceptsTab, RelativeSource={RelativeSource AncestorType=Window}}"
+                                 Grid.Row="3" Margin="2"/>
+                    </Grid>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+
+        <TextBox Text="{Binding Conclusion}" AcceptsReturn="True"
+                 metro:TextboxHelper.Watermark="Conclusion"
+                 FontFamily="{Binding DataContext.FontFamily,RelativeSource={RelativeSource AncestorType=Window}}"
+                 FontSize="{Binding DataContext.FontSize, RelativeSource={RelativeSource AncestorType=Window}}"
+                 Grid.Row="4" Margin="2"/>
+    </Grid>
+</UserControl>
+

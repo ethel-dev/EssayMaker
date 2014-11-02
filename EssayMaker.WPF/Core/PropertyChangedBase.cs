@@ -11,7 +11,7 @@ namespace EssayMaker.Core
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        protected virtual void NotifyPropertyChange([CallerMemberName] string propertyName = null)
+        protected virtual void NotifyPropertyChange(string propertyName)
         {
             var handler = PropertyChanged;
             if (handler != null) handler(this, new PropertyChangedEventArgs(propertyName));

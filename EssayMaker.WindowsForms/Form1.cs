@@ -17,7 +17,7 @@ namespace Essay
         {
             InitializeComponent();
             //FormBorderStyle = FormBorderStyle.FixedSingle;
-            this.MinimumSize = new Size(676, 562);
+            this.MinimumSize = new Size(517, 469);
             MinimizeBox = false;
             string d = DateTime.Now.ToString("M/d/yyyy");
             date.Text = d;
