@@ -360,15 +360,17 @@ footer span.octocat {
   height: 50px;
   margin: 0 auto;
 }
-body span.essaymakerfull {
+body .essaymakerfull:before {
   background: transparent url(http://i.imgur.com/94yEtvO.png) 0 0 no-repeat;
+  content:url('https://db.tt/cYEJvGOx');
   display: block;
   width: 340px;
   height: 340px;
   margin: 0 auto;
 }
-body span.essaymakerlite {
+body .essaymakerlite:before {
   background: transparent url(http://i.imgur.com/0hSEse4.png) 0 0 no-repeat;
+  content:url('https://db.tt/Em4bjIu7');
   display: block;
   width: 340px;
   height: 340px;
