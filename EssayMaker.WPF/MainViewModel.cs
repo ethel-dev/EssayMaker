@@ -32,9 +32,12 @@ namespace EssayMaker.Windows
             Export = new SimpleCommand(OnExport);
 
             FontSize = 14;
-            FontFamily = "Times New Roman";
+            FontFamily = "Segoe UI";
+            
 
             OnNewEssay();
+            
+            
         }
 
         public string Title
@@ -181,7 +184,7 @@ namespace EssayMaker.Windows
         {
             Model.Topics.Add(new EssayTopic()
             {
-                Title = "Topic" + (Model.Topics.Count + 1).ToString()
+                Title = ""
             });
         }
 
@@ -210,13 +213,12 @@ namespace EssayMaker.Windows
                         new LineBreak(),
                         new Run(Model.Date.ToShortDateString()),
                     },
-                    TextAlignment = TextAlignment.Center
+                    TextAlignment = TextAlignment.Right
                 });
 
                 doc.Blocks.Add(new Paragraph(new Run(Model.Thesis)));
 
-                doc.Blocks.AddRange(Model.Topics
-                                         .Select(x => new Paragraph
+                doc.Blocks.AddRange(Model.Topics.Select(x => new Paragraph
                                          {
                                              Inlines =
                                              {
