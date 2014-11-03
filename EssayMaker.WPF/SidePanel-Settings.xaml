@@ -52,10 +52,12 @@
                               Margin="5" VerticalAlignment="Stretch" HorizontalAlignment="Left">
                 <MenuItem Header="Theme" Padding="5,1,5,1"
                                       ItemsSource="{Binding AppThemes, ElementName=Control}"
-                                      ItemContainerStyle="{StaticResource AppThemeMenuItemStyle}" />
+                                      ItemContainerStyle="{StaticResource AppThemeMenuItemStyle}" 
+                                      FontFamily="Segoe UI"/>
                 <MenuItem Header="Accent" Padding="5,1,5,1"
                                       ItemsSource="{Binding AccentColors, ElementName=Control}"
-                                      ItemContainerStyle="{StaticResource AccentColorMenuItemStyle}" />
+                                      ItemContainerStyle="{StaticResource AccentColorMenuItemStyle}" 
+                                      FontFamily="Segoe UI"/>
             </Menu>
         </GroupBox>
 
@@ -74,7 +76,8 @@
 
                 <TextBlock Text="Font Type:"
                            Foreground="{DynamicResource IdealForegroundColorBrush}"
-                           Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"/>
+                           Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"
+                           FontFamily="Segoe UI"/>
                 <ComboBox ItemsSource="{Binding FontFamilies}"
                           SelectedItem="{Binding FontFamily}"
                           Grid.Row="0" Grid.Column="1" 
@@ -89,16 +92,19 @@
 
                 <TextBlock Text="Font Size:"
                            Foreground="{DynamicResource IdealForegroundColorBrush}"
-                           Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"/>
+                           Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"
+                           FontFamily="Segoe UI"/>
                 <ComboBox ItemsSource="{Binding FontSizes}"
                           SelectedItem="{Binding FontSize}"
                           Grid.Row="1" Grid.Column="1" 
-                          Margin="2" Width="120"/>
+                          Margin="2" Width="120"
+                          FontFamily="Segoe UI"/>
 
                 <CheckBox Content="Allow Tabs"
                           IsChecked="{Binding AcceptsTab}"
                           Foreground="{DynamicResource IdealForegroundColorBrush}"
-                          Grid.Row="2" Grid.Column="1" Margin="2"/>
+                          Grid.Row="2" Grid.Column="1" Margin="2"
+                          FontFamily="Segoe UI"/>
 
             </Grid>
         </GroupBox>

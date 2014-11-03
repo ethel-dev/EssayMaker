@@ -8,29 +8,35 @@
     <StackPanel MinWidth="150">
         <Button Content="Add Topic" 
                 Command="{Binding AddTopic}"
-                Margin="2" Width="100"/>
+                Margin="2" Width="100"
+                FontFamily="Segoe UI" FontWeight="Normal" />
 
         <Separator Height="2" Width="100" HorizontalAlignment="Center" Margin="10"/>
 
         <Button Content="New Essay" 
                 Command="{Binding NewEssay}"
-                Margin="2" Width="100"/>
+                Margin="2" Width="100"
+                FontFamily="Segoe UI" FontWeight="Normal" />
 
         <Button Content="Open..." 
                 Command="{Binding Open}"
-                Margin="2" Width="100"/>
+                Margin="2" Width="100"
+                FontFamily="Segoe UI" FontWeight="Normal" />
 
         <Button Content="Save" 
                 Command="{Binding Save}"
-                Margin="2" Width="100"/>
+                Margin="2" Width="100"
+                FontFamily="Segoe UI" FontWeight="Normal" />
 
         <Button Content="Save As..." 
                 Command="{Binding SaveAs}"
-                Margin="2" Width="100"/>
+                Margin="2" Width="100"
+                FontFamily="Segoe UI" FontWeight="Normal" />
 
         <Button Content="Export..." 
                 Command="{Binding Export}"
-                Margin="2" Width="100"/>
+                Margin="2" Width="100"
+                FontFamily="Segoe UI" FontWeight="Normal" />
 
     </StackPanel>
 </UserControl>

@@ -50,9 +50,24 @@
                  FontFamily="{Binding DataContext.FontFamily,RelativeSource={RelativeSource AncestorType=Window}}"
                  FontSize="{Binding DataContext.FontSize, RelativeSource={RelativeSource AncestorType=Window}}"
                  AcceptsTab="{Binding DataContext.AcceptsTab, RelativeSource={RelativeSource AncestorType=Window}}"
-                 Grid.Row="2" Margin="2"/>
-                 
-        <ItemsControl ItemsSource="{Binding Topics}"
+                 Grid.Row="2" Margin="2"
+                 >
+            <TextBox.ToolTip>
+                <StackPanel>
+                    <TextBlock FontWeight="Bold">Thesis Paragraph</TextBlock>
+                    <TextBlock>This paragraph should include a topic sentence, <LineBreak/> 
+                        3 examples (that will tie back to your body paragraph's <LineBreak/>
+                        topics about your topic, and a concluding sentence that <LineBreak/>
+                        repeats the main idea.</TextBlock>
+                </StackPanel>
+            </TextBox.ToolTip>
+        </TextBox>
+
+
+
+
+
+            <ItemsControl ItemsSource="{Binding Topics}"
                       Grid.Row="3">
             <ItemsControl.Template>
                 <ControlTemplate TargetType="ItemsControl">
@@ -84,21 +99,42 @@
                                  FontFamily="{Binding DataContext.FontFamily,RelativeSource={RelativeSource AncestorType=Window}}"
                                  FontSize="{Binding DataContext.FontSize, RelativeSource={RelativeSource AncestorType=Window}}"
                                  AcceptsTab="{Binding DataContext.AcceptsTab, RelativeSource={RelativeSource AncestorType=Window}}"
-                                 Grid.Row="1" Margin="2"/>
+                                 Grid.Row="1" Margin="2">
+                            <TextBox.ToolTip>
+                                <StackPanel>
+                                    <TextBlock FontWeight="Bold">Topic Sentence</TextBlock>
+                                    <TextBlock>Say what your paragraph will be about.</TextBlock>
+                                </StackPanel>
+                            </TextBox.ToolTip>
+                        </TextBox>
                         
                         <TextBox Text="{Binding Examples}" AcceptsReturn="True"
                                  metro:TextboxHelper.Watermark="Examples"
                                  FontFamily="{Binding DataContext.FontFamily,RelativeSource={RelativeSource AncestorType=Window}}"
                                  FontSize="{Binding DataContext.FontSize, RelativeSource={RelativeSource AncestorType=Window}}"
                                  AcceptsTab="{Binding DataContext.AcceptsTab, RelativeSource={RelativeSource AncestorType=Window}}"
-                                 Grid.Row="2" Margin="2"/>
+                                 Grid.Row="2" Margin="2">
+                            <TextBox.ToolTip>
+                                <StackPanel>
+                                    <TextBlock FontWeight="Bold">Examples</TextBlock>
+                                    <TextBlock>Give examples about why your topic sentence is true.</TextBlock>
+                                </StackPanel>
+                            </TextBox.ToolTip>
+                        </TextBox>
 
                         <TextBox Text="{Binding ConcludingSentence}" AcceptsReturn="True"
                                  metro:TextboxHelper.Watermark="Concluding Sentence"
                                  FontFamily="{Binding DataContext.FontFamily,RelativeSource={RelativeSource AncestorType=Window}}"
                                  FontSize="{Binding DataContext.FontSize, RelativeSource={RelativeSource AncestorType=Window}}"
                                  AcceptsTab="{Binding DataContext.AcceptsTab, RelativeSource={RelativeSource AncestorType=Window}}"
-                                 Grid.Row="3" Margin="2"/>
+                                 Grid.Row="3" Margin="2">
+                            <TextBox.ToolTip>
+                                <StackPanel>
+                                    <TextBlock FontWeight="Bold">Concluding Sentence</TextBlock>
+                                    <TextBlock>Conclude your paragraph and repeat the topic sentence.</TextBlock>
+                                </StackPanel>
+                            </TextBox.ToolTip>
+                        </TextBox>
                     </Grid>
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
@@ -108,7 +144,17 @@
                  metro:TextboxHelper.Watermark="Conclusion"
                  FontFamily="{Binding DataContext.FontFamily,RelativeSource={RelativeSource AncestorType=Window}}"
                  FontSize="{Binding DataContext.FontSize, RelativeSource={RelativeSource AncestorType=Window}}"
-                 Grid.Row="4" Margin="2"/>
+                 Grid.Row="4" Margin="2">
+            <TextBox.ToolTip>
+                <StackPanel>
+                    <TextBlock FontWeight="Bold">Concluding Paragraph</TextBlock>
+                    <TextBlock>This paragraph should conclude your subject. <LineBreak/> 
+                        e.g. using words like 'as you can see'. <LineBreak/>
+                        Tie back to your body paragraphs and <LineBreak/>
+                        use 3 sentences about them.</TextBlock>
+                </StackPanel>
+            </TextBox.ToolTip>
+        </TextBox>
     </Grid>
 </UserControl>
 
