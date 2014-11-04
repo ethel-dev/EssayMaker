@@ -51,7 +51,7 @@
                  FontSize="{Binding DataContext.FontSize, RelativeSource={RelativeSource AncestorType=Window}}"
                  AcceptsTab="{Binding DataContext.AcceptsTab, RelativeSource={RelativeSource AncestorType=Window}}"
                  Grid.Row="2" Margin="2"
-                 >
+                 TextWrapping="Wrap" Width="896">
             <TextBox.ToolTip>
                 <StackPanel>
                     <TextBlock FontWeight="Bold">Thesis Paragraph</TextBlock>
@@ -70,15 +70,21 @@
             <ItemsControl ItemsSource="{Binding Topics}"
                       Grid.Row="3">
             <ItemsControl.Template>
+                
+                
                 <ControlTemplate TargetType="ItemsControl">
                     <ScrollViewer HorizontalScrollBarVisibility="Auto"
                                   VerticalScrollBarVisibility="Disabled">
                         <UniformGrid IsItemsHost="True"
                                     Rows="1"/>
+                    
                     </ScrollViewer>
+                    
                 </ControlTemplate>
+                
             </ItemsControl.Template>
             <ItemsControl.ItemTemplate>
+                
                 <DataTemplate>
                     <Grid d:DataContext="{d:DesignInstance essay:EssayTopic}">
                         <Grid.RowDefinitions>
@@ -92,13 +98,18 @@
                                  Foreground="{DynamicResource AccentColorBrush}"
                                  FontFamily="{Binding DataContext.FontFamily,RelativeSource={RelativeSource AncestorType=Window}}"
                                  FontSize="{Binding DataContext.FontSize, RelativeSource={RelativeSource AncestorType=Window}}"
-                                 Margin="2"/>
+                                 Margin="2"
+                                 metro:TextboxHelper.Watermark="Topic Name"
+                                 ToolTip="Please leave this marked in!"
+                                 > 
+                        </TextBox>
                         
                         <TextBox Text="{Binding Sentence}" AcceptsReturn="True"
                                  metro:TextboxHelper.Watermark="Topic Sentence"
                                  FontFamily="{Binding DataContext.FontFamily,RelativeSource={RelativeSource AncestorType=Window}}"
                                  FontSize="{Binding DataContext.FontSize, RelativeSource={RelativeSource AncestorType=Window}}"
                                  AcceptsTab="{Binding DataContext.AcceptsTab, RelativeSource={RelativeSource AncestorType=Window}}"
+                                 TextWrapping="Wrap"
                                  Grid.Row="1" Margin="2">
                             <TextBox.ToolTip>
                                 <StackPanel>
@@ -113,7 +124,9 @@
                                  FontFamily="{Binding DataContext.FontFamily,RelativeSource={RelativeSource AncestorType=Window}}"
                                  FontSize="{Binding DataContext.FontSize, RelativeSource={RelativeSource AncestorType=Window}}"
                                  AcceptsTab="{Binding DataContext.AcceptsTab, RelativeSource={RelativeSource AncestorType=Window}}"
-                                 Grid.Row="2" Margin="2">
+                                 Grid.Row="2" Margin="2"
+                                 TextWrapping="Wrap">
+                                 
                             <TextBox.ToolTip>
                                 <StackPanel>
                                     <TextBlock FontWeight="Bold">Examples</TextBlock>
@@ -127,7 +140,8 @@
                                  FontFamily="{Binding DataContext.FontFamily,RelativeSource={RelativeSource AncestorType=Window}}"
                                  FontSize="{Binding DataContext.FontSize, RelativeSource={RelativeSource AncestorType=Window}}"
                                  AcceptsTab="{Binding DataContext.AcceptsTab, RelativeSource={RelativeSource AncestorType=Window}}"
-                                 Grid.Row="3" Margin="2">
+                                 Grid.Row="3" Margin="2"
+                                 TextWrapping="Wrap">
                             <TextBox.ToolTip>
                                 <StackPanel>
                                     <TextBlock FontWeight="Bold">Concluding Sentence</TextBlock>
@@ -144,7 +158,8 @@
                  metro:TextboxHelper.Watermark="Conclusion"
                  FontFamily="{Binding DataContext.FontFamily,RelativeSource={RelativeSource AncestorType=Window}}"
                  FontSize="{Binding DataContext.FontSize, RelativeSource={RelativeSource AncestorType=Window}}"
-                 Grid.Row="4" Margin="2">
+                 Grid.Row="4" Margin="2"
+                 TextWrapping="Wrap">
             <TextBox.ToolTip>
                 <StackPanel>
                     <TextBlock FontWeight="Bold">Concluding Paragraph</TextBlock>

@@ -184,7 +184,8 @@ namespace EssayMaker.Windows
         {
             Model.Topics.Add(new EssayTopic()
             {
-                Title = ""
+                Title = "Topic " + (Model.Topics.Count + 1).ToString()
+                
             });
         }
 
