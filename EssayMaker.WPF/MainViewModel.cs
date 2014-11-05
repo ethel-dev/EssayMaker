@@ -185,10 +185,8 @@ namespace EssayMaker.Windows
             Model.Topics.Add(new EssayTopic()
             {
                 Title = "Topic " + (Model.Topics.Count + 1).ToString()
-                
             });
         }
-
         private void OnExport()
         {
             var dialog = new SaveFileDialog()
@@ -221,16 +219,16 @@ namespace EssayMaker.Windows
 
                 doc.Blocks.AddRange(Model.Topics.Select(x => new Paragraph
                                          {
-                                             Inlines =
-                                             {
-                                                 new Run(x.Title),
-                                                 new LineBreak(),
-                                                 new Run(x.Sentence),
-                                                 new LineBreak(),
-                                                 new Run(x.Examples),
-                                                 new LineBreak(),
-                                                 new Run(x.ConcludingSentence),
-                                             }
+                                                Inlines =
+                                                {
+                                                    new Run(x.Sentence),
+                                                    new LineBreak(),
+                                                    new Run(x.Examples),
+                                                    new LineBreak(),
+                                                    new Run(x.ConcludingSentence), 
+                                                }
+                                             
+                                             
                                          }));
 
                 doc.Blocks.Add(new Paragraph(new Run(Model.Conclusion)));

@@ -37,6 +37,10 @@
                 Command="{Binding Export}"
                 Margin="2" Width="100"
                 FontFamily="Segoe UI" FontWeight="Normal" />
-
+        <Button Command="{Binding DeleteTopic}" 
+                Content="Delete Topic" 
+                FontFamily="Segoe UI" 
+                FontWeight="Normal" Width="100" 
+                />
     </StackPanel>
 </UserControl>
