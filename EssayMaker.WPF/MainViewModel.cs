@@ -30,6 +30,7 @@ namespace EssayMaker.Windows
             Save = new SimpleCommand(OnSave);
             SaveAs = new SimpleCommand(OnSaveAs);
             Export = new SimpleCommand(OnExport);
+            RemoveTopic = new SimpleCommand(OnRemoveTopic);
 
             FontSize = 14;
             FontFamily = "Segoe UI";
@@ -125,6 +126,8 @@ namespace EssayMaker.Windows
 
         public ICommand Export { get; private set; }
 
+        public ICommand RemoveTopic { get; private set; }
+
         private void OnEssayPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             if (e.PropertyName == "Title")
@@ -137,6 +140,14 @@ namespace EssayMaker.Windows
         {
             Model = Essay.CreateNew();
             FilePath = null;
+        }
+        private void OnRemoveTopic()
+        {
+            if (Model.Topics.Count != 1)
+            {
+                Model.Topics.Remove(Model.Topics.Last());
+            }
+            
         }
 
         private void OnOpen()
@@ -243,5 +254,6 @@ namespace EssayMaker.Windows
                 }
             }
         }
+        
     }
 }

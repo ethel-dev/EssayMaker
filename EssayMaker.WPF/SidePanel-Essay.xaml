@@ -10,7 +10,11 @@
                 Command="{Binding AddTopic}"
                 Margin="2" Width="100"
                 FontFamily="Segoe UI" FontWeight="Normal" />
-
+        <Button Command="{Binding RemoveTopic}" 
+                Content="Delete Topic" 
+                FontFamily="Segoe UI" 
+                FontWeight="Normal" Width="100" 
+                />
         <Separator Height="2" Width="100" HorizontalAlignment="Center" Margin="10"/>
 
         <Button Content="New Essay" 
@@ -37,10 +41,6 @@
                 Command="{Binding Export}"
                 Margin="2" Width="100"
                 FontFamily="Segoe UI" FontWeight="Normal" />
-        <Button Command="{Binding DeleteTopic}" 
-                Content="Delete Topic" 
-                FontFamily="Segoe UI" 
-                FontWeight="Normal" Width="100" 
-                />
+        
     </StackPanel>
 </UserControl>
