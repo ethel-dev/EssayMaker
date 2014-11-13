@@ -31,19 +31,19 @@ function copyToClipboard() {
 	window.prompt("Copy to clipboard: Ctrl+C, Enter", allElements);
 }
 function clearThePage() {
-	document.getElementsByName("topicsentence1")[0].innerHTML = "";
-	document.getElementsByName("topicsentence2")[0].innerHTML = "";
-	document.getElementsByName("topicsentence3")[0].innerHTML = "";
+	document.getElementsByName("topicsentence1")[0].value = "";
+	document.getElementsByName("topicsentence2")[0].value = "";
+	document.getElementsByName("topicsentence3")[0].value = "";
 	
-	document.getElementsByName("examples1")[0].innerHTML = "";
-	document.getElementsByName("examples2")[0].innerHTML = "";
-	document.getElementsByName("examples3")[0].innerHTML = "";
+	document.getElementsByName("examples1")[0].value = "";
+	document.getElementsByName("examples2")[0].value = "";
+	document.getElementsByName("examples3")[0].value = "";
 	
-	document.getElementsByName("concludingsentence1")[0].innerHTML = "";
-	document.getElementsByName("concludingsentence2")[0].innerHTML = "";
-	document.getElementsByName("concludingsentence3")[0].innerHTML = "";
+	document.getElementsByName("concludingsentence1")[0].value = "";
+	document.getElementsByName("concludingsentence2")[0].value = "";
+	document.getElementsByName("concludingsentence3")[0].value = "";
 	
-	document.getElementsByName("conclusion")[0].innerHTML = "";
-	document.getElementsByName("thesis")[0].innerHTML = "";
+	document.getElementsByName("conclusion")[0].value = "";
+	document.getElementsByName("thesis")[0].value = "";
 }
 }
