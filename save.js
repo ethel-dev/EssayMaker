@@ -46,4 +46,3 @@ function clearThePage() {
 	document.getElementsByName("conclusion")[0].value = "";
 	document.getElementsByName("thesis")[0].value = "";
 }
-}
