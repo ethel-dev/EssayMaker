@@ -227,21 +227,24 @@ namespace EssayMaker.Windows
                 });
 
                 doc.Blocks.Add(new Paragraph(new Run(Model.Thesis)));
+                new LineBreak();
+                new LineBreak();
 
                 doc.Blocks.AddRange(Model.Topics.Select(x => new Paragraph
                                          {
                                                 Inlines =
                                                 {
                                                     new Run(x.Sentence),
-                                                    new LineBreak(),
                                                     new Run(x.Examples),
-                                                    new LineBreak(),
                                                     new Run(x.ConcludingSentence), 
+                                                    new LineBreak(),
+                                                    new LineBreak(),
                                                 }
                                              
                                              
                                          }));
-
+                new LineBreak();
+                new LineBreak();
                 doc.Blocks.Add(new Paragraph(new Run(Model.Conclusion)));
 
                 using (var fs = new FileStream(dialog.FileName, FileMode.OpenOrCreate, FileAccess.ReadWrite))
