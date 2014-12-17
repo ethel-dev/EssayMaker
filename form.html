@@ -2,6 +2,7 @@
   <head>
     <title>EssayMaker Web</title>
     <link rel="stylesheet" type="text/css" href="skeleton/css/skeleton.css">
+    <script src="save.js"></script>
   </head>
   <body>
     <div class="container">
@@ -9,7 +10,9 @@
         <div class="12 columns">
           <h1>ESSAYMAKER WEB</h1>
           <h4><em>by Ethan Arterberry</em></h4>
+          <input type="text" id="inputFileNameToSaveAs" placeholder="Title">
           <textarea class="u-full-width" rows="10" cols="120" name="thesis">Thesis Paragraph: This paragraph should include a topic sentence, 3 examples (that will tie back to your body paragraph's topics about your topic, and a concluding sentence that repeats the main point.</textarea>
+          
         </div>
       </div>
       <div class="row">
@@ -36,8 +39,9 @@
       </div>
       <div class="row">
         <div class="12 columns">
-          <button class="button-primary">Copy</button> 
-          <button>Clear</button>
+          <button onclick="copyToClipboard()" class="button-primary">Copy</button> 
+          <button onclick="clearThePage()">Clear</button>
+          <button class="button-primary" onclick="saveJs()">Save</button>
         </div>
       </div>
     </div>
