@@ -1,3 +1,8 @@
-http://essaymaker.me/googled133a2f73e9723fb.html
-http://essaymaker.me/robots.txt
+User-Agent: *
+Disallow: 
+Allow: /form.html
+Allow: /index.html
+Disallow: /donationreasons.html
+
+Sitemap: http://essaymaker.me/sitemap.xml
 
