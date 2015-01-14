@@ -1,8 +1,0 @@
-User-Agent: *
-Disallow: 
-Allow: /form.html
-Allow: /index.html
-Disallow: /donationreasons.html
-
-Sitemap: http://essaymaker.me/sitemap.xml
-
