@@ -1,7 +1,7 @@
 ---
 title: "papers and stuff"
-bg: white
-color: red
+bg: red
+color: black
 style: center
 ---
 
