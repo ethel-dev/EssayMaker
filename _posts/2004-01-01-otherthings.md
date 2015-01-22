@@ -3,7 +3,7 @@ title: "papers and stuff"
 bg: red
 color: white
 style: center
-icon: file-text-o
+fa-icon: file-text-o
 ---
 
 ### If you want to see my turned in papers for EssayMaker, you've come to the right place!
