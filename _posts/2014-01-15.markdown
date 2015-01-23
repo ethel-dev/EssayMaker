@@ -1,0 +1,8 @@
+---
+title: "blog"
+bg: blue
+color: gilford
+fa-icon: blog
+---
+
+Go to the [blog](blog/index.html)!
