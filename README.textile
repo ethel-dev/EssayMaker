@@ -1,3 +1,19 @@
 h1. EssayMaker
 
 The weirdest and coolest project I've ever done.
+
+bq. Its EssayMaker! It's a graphic organizer... but on a computer. It's very hard to explain, but I'll try.
+
+h2. Its *Word* for essays. Its. Crazy.
+
+Okay. *EssayMaker* is a graphical essay organizer that works on your computer. You input a thesis, a topic sentence, examples, conclusions, etc. and you get out something like this:
+
+bq. Ethan Arterberry 
+Jones 7 
+Thu Nov 13 2014 
+A compound is something made of two or more different elements, while the elements that form it have different chemical and physical properties. Take the MgSO4 and Na2CO3 reaction we did in science class. The reactants are soluble but MgCO3 is a solid. One physical property of Magnesium is that it is a metal, it is shiny, but MgCO3 and MgSO4 are inorganic salts. They are white and chalky, not silver and metallic. This shows that elements are different than the molecules and compounds they make up. A compound isn’t always the same chemically and physically than the elements making it up.
+
+Its faster, better and way simpler than anything else out there.
+
+h1. Cost: $0.00
+
