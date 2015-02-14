@@ -1,0 +1,9 @@
+body {
+  background-color: #11a9e2;
+      background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0d86b3), to(#11a9e2));
+      background-image: -moz-linear-gradient(#0d86b3, #11a9e2);
+      background-repeat: no-repeat;
+      padding: 100px;
+      text-rendering: optimizeLegibility;
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+}
