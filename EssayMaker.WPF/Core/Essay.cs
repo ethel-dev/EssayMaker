@@ -99,9 +99,9 @@ namespace EssayMaker.Core
                 Date = DateTime.Today,
                 Topics =
                 {
-                    new EssayTopic() {Title = "Topic 1"},
-                    new EssayTopic() {Title = "Topic 2"},
-                    new EssayTopic() {Title = "Topic 3"}
+                    new EssayTopic(),
+                    new EssayTopic(),
+                    new EssayTopic()
                 }
             };
         }
