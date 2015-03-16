@@ -6,7 +6,7 @@
                    BorderBrush="{DynamicResource AccentColorBrush}" BorderThickness="1"
                    GlowBrush="{DynamicResource AccentColorBrush}" NonActiveGlowBrush="DarkGray"
                    WindowStartupLocation="CenterScreen" MinHeight="480" MinWidth="720"
-                   Title="{Binding Title}" x:Name="Window">
+                   Title="{Binding Title}" x:Name="Window" SizeToContent="WidthAndHeight">
     <metro:MetroWindow.RightWindowCommands>
         <metro:WindowCommands>
             <ToggleButton x:Name="ToolsButton"
@@ -39,8 +39,12 @@
     </metro:MetroWindow.Flyouts>
 
     <Grid>
-        <local:EssayView DataContext="{Binding Model}"/>
-        <ResizeGrip HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="332*"/>
+            <ColumnDefinition Width="47*"/>
+        </Grid.ColumnDefinitions>
+        <local:EssayView DataContext="{Binding Model}" Grid.ColumnSpan="2"/>
+        <ResizeGrip HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Column="1"/>
     </Grid>
 
 

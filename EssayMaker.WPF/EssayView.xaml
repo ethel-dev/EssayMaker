@@ -24,7 +24,7 @@
                  metro:TextboxHelper.Watermark="Title"
                  FontFamily="Segoe UI light" FontSize="36" Margin="2" MaxWidth="896" Grid.ColumnSpan="2" />
 
-        <Grid Grid.Row="1" Grid.ColumnSpan="2">
+        <Grid Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" Width="900">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
@@ -103,9 +103,14 @@
                                  FontSize="{Binding DataContext.FontSize, RelativeSource={RelativeSource AncestorType=Window}}"
                                  Margin="2"
                                  metro:TextboxHelper.Watermark="Topic Name"
-                                 ToolTip="Please leave this marked in!"
                                  TextWrapping="Wrap" 
-                                 > 
+                                 >
+                            <TextBox.ToolTip>
+                                <StackPanel>
+                                    <TextBlock FontWeight="Bold">Topic Name</TextBlock>
+                                    <TextBlock>The name of the topic.</TextBlock>
+                                </StackPanel>
+                            </TextBox.ToolTip>
                         </TextBox>
                         
                         <TextBox Text="{Binding Sentence}" AcceptsReturn="True"

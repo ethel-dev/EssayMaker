@@ -193,10 +193,7 @@ namespace EssayMaker.Windows
 
         private void OnAddTopic()
         {
-            Model.Topics.Add(new EssayTopic()
-            {
-                Title = "Topic " + (Model.Topics.Count + 1).ToString()
-            });
+            Model.Topics.Add(new EssayTopic());
         }
         private void OnExport()
         {
