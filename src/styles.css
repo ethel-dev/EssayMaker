@@ -1,0 +1,26 @@
+/*
+css
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,700italic,400italic);
+
+body {
+    font-family: "Roboto", sans-serif !important;
+}
+
+.container
+
+.part {
+    border: 1px solid black;
+    outline: none;
+    transition: border .5s;
+    
+    width: 100%;
+    height: ;
+    
+    overflow: auto;
+}
+
+.part:focus {
+    border: 1px solid #17dbdb;
+}
