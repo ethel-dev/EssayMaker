@@ -15,8 +15,8 @@ css
        padding-right: 13px;
      }
 
-     body {
-       font-size: 8pt;
+     .para, .part, .part-label {
+       font-size: 6pt !important;
      }
 }
 
@@ -26,11 +26,11 @@ html, body, .row {
 
 body {
     font-family: "Inconsolata", monospace !important;
-    font-size: 12pt;
 }
 
 .part-label {
     width: auto;
+    font-size: 12pt;
 }
 
 .para, .part {
@@ -40,6 +40,8 @@ body {
 
     width: 100%;
     height: 15vh;
+    
+    font-size: 12pt;
 
     resize: none;
 
