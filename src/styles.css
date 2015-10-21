@@ -15,8 +15,8 @@ css
        padding-right: 13px;
      }
 
-     .para, .part, .part-label {
-       font-size: 6pt !important;
+     .para, .part, .part-label, .button-primary {
+       font-size: 3vw !important;
      }
 }
 
@@ -24,17 +24,17 @@ html, body, .row {
     height: 100%
 }
 
-body {
+.part-label,  body, .button-primary {
     font-family: "Inconsolata", monospace !important;
-}
-
-.part-label {
-    width: auto;
     font-size: 12pt;
 }
 
+.button-primary {
+    transition: border .5s, box-shadow .5s;
+}
+
 .para, .part {
-    border: 1px solid black;
+    border: 1px solid initial;
     outline: none;
     transition: border .5s, box-shadow .5s;
 
@@ -44,7 +44,7 @@ body {
     font-size: 12pt;
 
     resize: none;
-
+    
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
@@ -52,7 +52,7 @@ body {
     padding: 0.5vw;
 }
 
-.part:focus, .para:focus {
+.part:focus, .para:focus, .button-primary:hover {
     border: 1px solid #17dbdb;
     -webkit-box-shadow: 0.5vw 0.1vh 3vh rgba(0,0,0,0.18);
     -moz-box-shadow: 0.5vw 0.1vh 3vh rgba(0,0,0,0.18);

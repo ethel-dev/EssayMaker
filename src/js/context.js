@@ -1,4 +1,4 @@
-var titleHide, titleShow;
+var copyThot, titleHide, titleShow;
 
 titleShow = function(type, num) {
   if (type !== "co" || "th") {
@@ -26,6 +26,12 @@ titleHide = function(type, num) {
   } else {
     return $(".l" + type).collapse("hide");
   }
+};
+
+copyThot = function() {
+  var essay;
+  essay = ("\t" + ($("#th").val())) + ("\r\t" + ($("#ts1").val()) + " " + ($("#ex1").val()) + " " + ($("#cs1").val()) + "\r\t") + (($("#ts2").val()) + " " + ($("#ex2").val()) + " " + ($("#cs2").val()) + "\r\t") + (($("#ts3").val()) + " " + ($("#ex3").val()) + " " + ($("#cs3").val()) + "\r\t") + ("" + ($("#co").val()));
+  return window.prompt("Copy to clipboard: Ctrl+C, Enter", essay);
 };
 
 // ---

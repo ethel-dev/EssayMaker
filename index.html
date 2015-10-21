@@ -14,6 +14,7 @@
     <!-- stylesheets -->
     <link href="lib/bs/bootstrap.min.css" rel="stylesheet">
     <link href="src/styles.css" rel="stylesheet">
+    <link href="lib/skeleton.buttons.css" rel="stylesheet">
   </head>
   <body>
     <div class="container">
@@ -52,6 +53,11 @@
       </div>
       <p class="part-label collapse lco">Concluding Paragraph</p>
       <textarea class="para" id="co" onfocus="titleShow('co', '')" onblur="titleHide('co', '')" placeholder="This paragraph should conclude your subject. e.g. using words like 'as you can see'. Tie back to your body paragraphs and use 3 sentences about them."></textarea>
+      
+      <hr>
+      
+      <button class="button-primary" onclick="saveThot()">Save</button>
+      <button class="button-primary" onclick="copyThot()">Copy</button>
     </div>
 
     <!-- scripts -->
