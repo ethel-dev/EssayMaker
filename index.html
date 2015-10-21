@@ -22,6 +22,11 @@
 
       <hr>
       
+      <div class="header">
+        <input type="text" class="head-input" id="name">
+        <p id="date-text"></p>
+      </div>
+      
       <p class="part-label collapse lth">Thesis Paragraph</p>
       <textarea class="para" id="th" onfocus="titleShow('th', '')" onblur="titleHide('lth')" placeholder="This paragraph should include a topic sentence, 3 examples (that will tie back to your body paragraph's topics about your topic, and a concluding sentence that repeats the main point.)"></textarea>
 
@@ -56,8 +61,8 @@
       
       <hr>
       
-      <button class="button-primary" onclick="saveThot()">Save</button>
-      <button class="button-primary" onclick="copyThot()">Copy</button>
+      <button class="button-primary" id="save-thot" onclick="saveThot()">Save</button>
+      <button class="button-primary" id="copy-thot" onclick="copyThot()">Copy</button>
     </div>
 
     <!-- scripts -->
@@ -66,5 +71,7 @@
     <script src="lib/marked.min.js"></script>
     <script src="lib/sentimood.min.js"></script>
     <script src="src/js/context.js"></script>
+    <script src="src/js/save.js"></script>
+    <script src="lib/zeroclipboard.min.js"></script>
   </body>
 </html>

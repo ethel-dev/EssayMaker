@@ -24,12 +24,29 @@ html, body, .row {
     height: 100%
 }
 
-.part-label,  body, .button-primary {
+.part-label,  body, .button-primary, .head-input {
     font-family: "Inconsolata", monospace !important;
     font-size: 12pt;
 }
 
 .button-primary {
+    transition: border .5s, box-shadow .5s;
+}
+
+.head-input {
+    font-size: 12pt;
+
+    resize: none;
+    
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+
+    padding: 0.5vw;
+    
+    border: 1px solid rgb(169, 169, 169);
+    border-style: outset;
+    outline: none;
     transition: border .5s, box-shadow .5s;
 }
 
@@ -52,7 +69,7 @@ html, body, .row {
     padding: 0.5vw;
 }
 
-.part:focus, .para:focus, .button-primary:hover {
+.part:focus, .para:focus, .button-primary:hover, .head-input:focus {
     border: 1px solid #17dbdb;
     -webkit-box-shadow: 0.5vw 0.1vh 3vh rgba(0,0,0,0.18);
     -moz-box-shadow: 0.5vw 0.1vh 3vh rgba(0,0,0,0.18);
