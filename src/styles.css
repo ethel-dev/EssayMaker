@@ -4,23 +4,35 @@ css
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,700,700italic,400italic);
 
+html, body, .row {
+  height: 100%
+}
+
 body {
     font-family: "Roboto", sans-serif !important;
+    font-size: 1.5vh;
 }
 
-.container
-
-.part {
+.para, .part {
     border: 1px solid black;
     outline: none;
-    transition: border .5s;
-    
+    transition: border .5s, box-shadow .5s;
+
     width: 100%;
-    height: ;
-    
-    overflow: auto;
+    height: 15vh;
+
+    resize: none;
+
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+
+    padding: 2vh;
 }
 
-.part:focus {
+.part:focus, .para:focus {
     border: 1px solid #17dbdb;
+    -webkit-box-shadow: 10px 10px 95px 14px rgba(0,0,0,0.18);
+    -moz-box-shadow: 10px 10px 95px 14px rgba(0,0,0,0.18);
+    box-shadow: 10px 10px 95px 14px rgba(0,0,0,0.18);
 }
