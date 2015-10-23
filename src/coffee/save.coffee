@@ -2,6 +2,9 @@ window.onload = ->
     # zero clipboard
     window.zclip = new ZeroClipboard document.getElementById("copy-thot")
     
+    # initialize tooltips
+    $('[data-toggle="tooltip"]').tooltip()
+    
     # attempt to use zeroclipboard, but then again nobody likes flash so it probably won't work and i'll scrap it later
     zclip.on "ready", ->
         console?.log "ZeroClipboard is ready!"
@@ -37,7 +40,6 @@ copyThot =  ->
     zclip.on "copy", (event) =>
         clipboard = event.clipboardData
         clipboard.setData "text/plain", essay
-    
-    ### prompt to copy
-    window.prompt("Copy to clipboard: Ctrl+C, Enter", essay)
-    ###
+        
+    zclip.on "error", (event) =>
+        window.prompt("Copy to clipboard:\nCtrl+C, Enter", essay)

@@ -15,13 +15,17 @@ css
        padding-right: 13px;
      }
 
-     .para, .part, .part-label, .button-primary {
+     .para, .part, .part-label, .button-primary, .head-input{
        font-size: 3vw !important;
      }
 }
 
 html, body, .row {
     height: 100%
+}
+
+.container {
+    padding-bottom: 4vh;
 }
 
 .part-label,  body, .button-primary, .head-input {
@@ -33,10 +37,12 @@ html, body, .row {
     transition: border .5s, box-shadow .5s;
 }
 
+#date-text {
+    padding: 0.5vw;
+}
+
 .head-input {
     font-size: 12pt;
-
-    resize: none;
     
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -45,7 +51,6 @@ html, body, .row {
     padding: 0.5vw;
     
     border: 1px solid rgb(169, 169, 169);
-    border-style: outset;
     outline: none;
     transition: border .5s, box-shadow .5s;
 }
@@ -69,7 +74,7 @@ html, body, .row {
     padding: 0.5vw;
 }
 
-.part:focus, .para:focus, .button-primary:hover, .head-input:focus {
+.part:focus, .para:focus, .button-primary:hover, .button-primary.zeroclipboard-is-hover, .head-input:focus {
     border: 1px solid #17dbdb;
     -webkit-box-shadow: 0.5vw 0.1vh 3vh rgba(0,0,0,0.18);
     -moz-box-shadow: 0.5vw 0.1vh 3vh rgba(0,0,0,0.18);
