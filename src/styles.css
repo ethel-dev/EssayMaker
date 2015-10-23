@@ -2,15 +2,35 @@
 css
 */
 
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,700italic,400italic);
+@import url(https://fonts.googleapis.com/css?family=Inconsolata:400,700);
+
+@media only screen and (max-device-width: 480px) {
+     .col-xs-4, .col-sm-4, .col-md-4 {
+       padding-left: 2px;
+       padding-right: 2px;
+     }
+
+     .row {
+       padding-left: 13px;
+       padding-right: 13px;
+     }
+
+     body {
+       font-size: 8pt;
+     }
+}
 
 html, body, .row {
-  height: 100%
+    height: 100%
 }
 
 body {
-    font-family: "Roboto", sans-serif !important;
-    font-size: 1.5vh;
+    font-family: "Inconsolata", monospace !important;
+    font-size: 12pt;
+}
+
+.part-label {
+    width: auto;
 }
 
 .para, .part {
@@ -27,12 +47,12 @@ body {
     -moz-border-radius: 5px;
     border-radius: 5px;
 
-    padding: 2vh;
+    padding: 0.5vw;
 }
 
 .part:focus, .para:focus {
     border: 1px solid #17dbdb;
-    -webkit-box-shadow: 10px 10px 95px 14px rgba(0,0,0,0.18);
-    -moz-box-shadow: 10px 10px 95px 14px rgba(0,0,0,0.18);
-    box-shadow: 10px 10px 95px 14px rgba(0,0,0,0.18);
+    -webkit-box-shadow: 0.5vw 0.1vh 3vh rgba(0,0,0,0.18);
+    -moz-box-shadow: 0.5vw 0.1vh 3vh rgba(0,0,0,0.18);
+    box-shadow: 0.5vw 0.1vh 3vh rgba(0,0,0,0.18);
 }
