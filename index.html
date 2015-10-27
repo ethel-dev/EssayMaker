@@ -15,6 +15,7 @@
     <link href="lib/bs/bootstrap.min.css" rel="stylesheet">
     <link href="src/styles.css" rel="stylesheet">
     <link href="lib/skeleton.buttons.css" rel="stylesheet">
+    <link href="lib/bs/bootstrap-toggle.min.css" rel="stylesheet">
   </head>
   <body>
     <div class="container">
@@ -22,56 +23,66 @@
 
       <hr>
       
-      <div class="header">
-        <input type="text" placeholder="Name" class="head-input" id="name">
-        <p id="date-text"></p>
-      </div>
+      <div id="preview"></div>
       
-      <p class="part-label collapse lth">Thesis Paragraph</p>
-      <textarea class="para" id="th" onfocus="titleShow('th', '')" onblur="titleHide('lth')" placeholder="This paragraph should include a topic sentence, 3 examples (that will tie back to your body paragraph's topics about your topic, and a concluding sentence that repeats the main point.)"></textarea>
-
-      <div class="row">
-        <div class="col-xs-4 col-sm-4 col-md-4">
-          <p class="part-label collapse lts1">Topic Sentence</p>
-          <textarea id="ts1" class="part" onfocus="titleShow('ts', '1')" onblur="titleHide('ts', '1')" placeholder="Say what your paragraph will be about."></textarea>
-          <p class="part-label collapse lex1">Examples</p>
-          <textarea id="ex1" class="part" onfocus="titleShow('ex', '1')" onblur="titleHide('ex', '1')" placeholder="Give examples about why your topic sentence is true."></textarea>
-          <p class="part-label collapse lcs1">Concluding Sentence</p>
-          <textarea id="cs1" class="part" onfocus="titleShow('cs', '1')" onblur="titleHide('cs', '1')" placeholder="Conclude your paragraph and repeat the topic sentence."></textarea>
+      <div id="editor">
+        <div class="header">
+          <input type="text" placeholder="Name" class="head-input" id="name">
+          <input type="text" placeholder="Title" class="head-input" id="title">
+          <p id="date-text"></p>
         </div>
-        <div class="col-xs-4 col-sm-4 col-md-4">
-          <p class="part-label collapse lts2">Topic Sentence</p>
-          <textarea id="ts2" class="part" onfocus="titleShow('ts', '2')" onblur="titleHide('ts', '2')" placeholder="Say what your paragraph will be about."></textarea>
-          <p class="part-label collapse lex2">Examples</p>
-          <textarea id="ex2" class="part" onfocus="titleShow('ex', '2')" onblur="titleHide('ex', '2')" placeholder="Give examples about why your topic sentence is true."></textarea>
-          <p class="part-label collapse lcs2">Concluding Sentence</p>
-          <textarea id="cs2" class="part" onfocus="titleShow('cs', '2')" onblur="titleHide('cs', '2')" placeholder="Conclude your paragraph and repeat the topic sentence."></textarea>
-        </div>
-        <div class="col-xs-4 col-sm-4 col-md-4">
-          <p class="part-label collapse lts3">Topic Sentence</p>
-          <textarea id="ts3" class="part" onfocus="titleShow('ts', '3')" onblur="titleHide('ts', '3')" placeholder="Say what your paragraph will be about."></textarea>
-          <p class="part-label collapse lex3">Examples</p>
-          <textarea id="ex3" class="part" onfocus="titleShow('ex', '3')" onblur="titleHide('ex', '3')" placeholder="Give examples about why your topic sentence is true."></textarea>
-          <p class="part-label collapse lcs3">Concluding Sentence</p>
-          <textarea id="cs3" class="part" onfocus="titleShow('cs', '3')" onblur="titleHide('cs', '3')" placeholder="Conclude your paragraph and repeat the topic sentence."></textarea>
+        
+        <p class="part-label collapse lth">Thesis Paragraph</p>
+        <textarea class="para" id="th" onfocus="titleShow('th', '')" onblur="titleHide('lth')" placeholder="This paragraph should include a topic sentence, 3 examples (that will tie back to your body paragraph's topics about your topic, and a concluding sentence that repeats the main point.)"></textarea>
+        
+        <div class="row">
+          <div class="col-xs-4 col-sm-4 col-md-4">
+            <p class="part-label collapse lts1">Topic Sentence</p>
+            <textarea id="ts1" class="part" onfocus="titleShow('ts', '1')" onblur="titleHide('ts', '1')" placeholder="Say what your paragraph will be about."></textarea>
+            <p class="part-label collapse lex1">Examples</p>
+            <textarea id="ex1" class="part" onfocus="titleShow('ex', '1')" onblur="titleHide('ex', '1')" placeholder="Give examples about why your topic sentence is true."></textarea>
+            <p class="part-label collapse lcs1">Concluding Sentence</p>
+            <textarea id="cs1" class="part" onfocus="titleShow('cs', '1')" onblur="titleHide('cs', '1')" placeholder="Conclude your paragraph and repeat the topic sentence."></textarea>
+          </div>
+          <div class="col-xs-4 col-sm-4 col-md-4">
+            <p class="part-label collapse lts2">Topic Sentence</p>
+            <textarea id="ts2" class="part" onfocus="titleShow('ts', '2')" onblur="titleHide('ts', '2')" placeholder="Say what your paragraph will be about."></textarea>
+            <p class="part-label collapse lex2">Examples</p>
+            <textarea id="ex2" class="part" onfocus="titleShow('ex', '2')" onblur="titleHide('ex', '2')" placeholder="Give examples about why your topic sentence is true."></textarea>
+            <p class="part-label collapse lcs2">Concluding Sentence</p>
+            <textarea id="cs2" class="part" onfocus="titleShow('cs', '2')" onblur="titleHide('cs', '2')" placeholder="Conclude your paragraph and repeat the topic sentence."></textarea>
+          </div>
+          <div class="col-xs-4 col-sm-4 col-md-4">
+            <p class="part-label collapse lts3">Topic Sentence</p>
+            <textarea id="ts3" class="part" onfocus="titleShow('ts', '3')" onblur="titleHide('ts', '3')" placeholder="Say what your paragraph will be about."></textarea>
+            <p class="part-label collapse lex3">Examples</p>
+            <textarea id="ex3" class="part" onfocus="titleShow('ex', '3')" onblur="titleHide('ex', '3')" placeholder="Give examples about why your topic sentence is true."></textarea>
+            <p class="part-label collapse lcs3">Concluding Sentence</p>
+            <textarea id="cs3" class="part" onfocus="titleShow('cs', '3')" onblur="titleHide('cs', '3')" placeholder="Conclude your paragraph and repeat the topic sentence."></textarea>
         </div>
       </div>
       <p class="part-label collapse lco">Concluding Paragraph</p>
       <textarea class="para" id="co" onfocus="titleShow('co', '')" onblur="titleHide('co', '')" placeholder="This paragraph should conclude your subject. e.g. using words like 'as you can see'. Tie back to your body paragraphs and use 3 sentences about them."></textarea>
+      </div>
       
       <hr>
-      
+      <input id="preview-toggle" type="checkbox" data-toggle="toggle" data-on="Previewing" data-off="Editing" data-height="38">
+      <br>
       <button class="button-primary" id="save-thot" onclick="saveThot()">Save</button>
       <button class="button-primary" data-toggle="tooltip" title="You will need Flash to copy your essay directly, but you can still manually do so by clicking it with Flash disabled." id="copy-thot" onclick="copyThot()">Copy</button>
     </div>
 
-    <!-- scripts -->
+    <!-- dependencies -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="lib/bs/bootstrap.min.js"></script>
     <script src="lib/marked.min.js"></script>
     <script src="lib/sentimood.min.js"></script>
+    <script src="lib/zeroclipboard.min.js"></script>
+    <script src="lib/saveas.min.js"></script>
+    <script src="lib/bs/bootstrap-toggle.min.js"></script>
+    
+    <!-- scripts -->
     <script src="src/js/context.js"></script>
     <script src="src/js/save.js"></script>
-    <script src="lib/zeroclipboard.min.js"></script>
   </body>
 </html>

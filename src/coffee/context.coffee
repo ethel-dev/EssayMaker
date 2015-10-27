@@ -1,3 +1,16 @@
+$ ->
+    $('#preview-toggle').change ->
+        if $(this).prop("checked") == true
+            # preview essay
+            essay = "#{$("#name").val()}<br>#{$("#date-text").text()}<br>#{$("#title").val()}<br><br>\t#{$("#th").val()}" + "<br>\t#{$("#ts1").val()} #{$("#ex1").val()} #{$("#cs1").val()}<br>\t" + "#{$("#ts2").val()} #{$("#ex2").val()} #{$("#cs2").val()}<br>\t" + "#{$("#ts3").val()} #{$("#ex3").val()} #{$("#cs3").val()}<br>\t" + "#{$("#co").val()}"
+            $("#preview").html(essay)
+            
+            $("#editor").hide(125)
+            $("#preview").show(125)
+        else
+            $("#preview").hide(125)
+            $("#editor").show(125)
+
 titleShow = (type, num) ->
     if type isnt "co" or "th"
         $(".l#{type}#{num}").css("visibility", "visible")
