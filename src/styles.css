@@ -3,6 +3,7 @@ css
 */
 
 @import url(https://fonts.googleapis.com/css?family=Inconsolata:400,700);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
 
 @media only screen and (max-device-width: 480px) {
      .col-xs-4, .col-sm-4, .col-md-4 {
@@ -15,12 +16,24 @@ css
        padding-right: 13px;
      }
 
-     .para, .part, .part-label, .button-primary, .head-input, .toggle {
-       font-size: 3vw !important;
+     #date-text, .para, .part, .part-label, .btn-primary, .head-input, .toggle-on, .toggle-off, .text {
+       font-size: 3.5vw !important;
+     }
+     
+     #button-container-child {
+         width: 100% !important;
+     }
+     
+     li > .divider-vertical {
+         display: none;
+     }
+     
+     li {
+         padding: 0px;
      }
 }
 
-.part-label,  body, .button-primary, .head-input {
+.part-label,  body, .btn-primary, .head-input, #date-text, .text {
     font-family: "Inconsolata", monospace !important;
     font-size: 12pt;
 }
@@ -31,10 +44,6 @@ html, body, .row {
 
 .container {
     padding-bottom: 4vh;
-}
-
-.button-primary {
-    transition: border .5s, box-shadow .5s;
 }
 
 #date-text {
@@ -77,25 +86,90 @@ html, body, .row {
 .toggle {
     transition: border .5s, box-shadow .5s;
     border-color: #33C3F0;
-    font-size: 12pt;
-    margin-bottom: 12px;
+    font-size: 16px !important;
 }
 
 #preview {
     display: none;
+    font-size: 12pt;
+    line-height: 200%;
 }
 
-.part:focus, .para:focus, .button-primary:hover, .button-primary.zeroclipboard-is-hover, .head-input:focus, .toggle:hover {
+.part:focus, .para:focus, .btn-primary:hover, .zeroclipboard-is-hover, .head-input:focus, .toggle:hover {
     border: 1px solid #17dbdb;
     -webkit-box-shadow: 0.5vw 0.1vh 3vh rgba(0,0,0,0.18);
     -moz-box-shadow: 0.5vw 0.1vh 3vh rgba(0,0,0,0.18);
     box-shadow: 0.5vw 0.1vh 3vh rgba(0,0,0,0.18);
 }
 
-.toggle-on:hover {
+.toggle-on:hover, .btn-primary:hover {
     background-color: #1EAEDB;
 }
 
-.toggle-on {
+.toggle-on, .btn-primary {
     background-color: #33C3F0;
+}
+
+.btn-primary {
+    transition: border .5s, box-shadow .5s, transform .5s;
+    height: 38px;
+    border-color: #33C3F0;
+    text-align: center;
+}
+
+#button-container-child {
+    padding: 0.5% 0;
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+
+.button-container {
+    padding: 0.25% 0;
+    width: 100%;
+}
+
+.divider-vertical {
+    height: 38px;
+    border-left: 1px solid #F2F2F2;
+    border-right: 1px solid #FFF;
+}
+
+.list-inline {
+    margin: 0 auto;
+    display: inline-block;
+}
+
+.hiddenfile {
+    width: 0px;
+    height: 0px;
+    overflow: hidden;
+}
+
+.blue {
+    color: #33C3F0;
+}
+
+.green {
+    color: green;
+}
+
+.red {
+    color: red;
+}
+
+.drop {
+    transform: scale(1.1, 1.1);
+    -webkit-box-shadow: 0.6vw 0.2vh 3vh rgba(0,0,0,0.18);
+    -moz-box-shadow: 0.6vw 0.2vh 3vh rgba(0,0,0,0.18);
+    box-shadow: 0.6vw 0.2vh 3vh rgba(0,0,0,0.18);
+}
+
+.pacman-scale {
+    transform: scale(0.4,0.4) translateY(-60%)
+}
+
+#save-text {
+    pointer-events: none;
 }

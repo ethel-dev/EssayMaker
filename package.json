@@ -1,0 +1,19 @@
+{
+  "name": "EssayMaker",
+  "version": "2.0.0",
+  "description": "An online graphical essay organizer.",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-wiredep": "^2.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/soops/EssayMaker.git"
+  },
+  "author": "Ethan Arterberry",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/soops/EssayMaker/issues"
+  },
+  "homepage": "http://getessaymaker.com"
+}

@@ -2,7 +2,7 @@ $ ->
     $('#preview-toggle').change ->
         if $(this).prop("checked") == true
             # preview essay
-            essay = "#{$("#name").val()}<br>#{$("#date-text").text()}<br>#{$("#title").val()}<br><br>\t#{$("#th").val()}" + "<br>\t#{$("#ts1").val()} #{$("#ex1").val()} #{$("#cs1").val()}<br>\t" + "#{$("#ts2").val()} #{$("#ex2").val()} #{$("#cs2").val()}<br>\t" + "#{$("#ts3").val()} #{$("#ex3").val()} #{$("#cs3").val()}<br>\t" + "#{$("#co").val()}"
+            essay = "#{$("#name").val()}<br>#{$("#date-text").text()}<br>#{$("#title").val()}<br><br>&nbsp;&nbsp;&nbsp;&nbsp;#{$("#th").val()}" + "<br>&nbsp;&nbsp;&nbsp;&nbsp;#{$("#ts1").val()} #{$("#ex1").val()} #{$("#cs1").val()}<br>&nbsp;&nbsp;&nbsp;&nbsp;" + "#{$("#ts2").val()} #{$("#ex2").val()} #{$("#cs2").val()}<br>&nbsp;&nbsp;&nbsp;&nbsp;" + "#{$("#ts3").val()} #{$("#ex3").val()} #{$("#cs3").val()}<br>&nbsp;&nbsp;&nbsp;&nbsp;" + "#{$("#co").val()}"
             $("#preview").html(essay)
             
             $("#editor").hide(125)
@@ -10,7 +10,33 @@ $ ->
         else
             $("#preview").hide(125)
             $("#editor").show(125)
-
+    
+    $(".part, .para").blur ->
+        essay = "#{$("#th").val()}" + "\r\t#{$("#ts1").val()} #{$("#ex1").val()} #{$("#cs1").val()}\r\t" + "#{$("#ts2").val()} #{$("#ex2").val()} #{$("#cs2").val()}\r\t" + "#{$("#ts3").val()} #{$("#ex3").val()} #{$("#cs3").val()}\r\t" + "#{$("#co").val()}"
+        rating = sentiment.analyze(essay).score
+        $("#tone-container").tooltip "destroy"
+        
+        if rating < 0
+            $("#tone-input").css "color", "red"
+            $("#tone-container").tooltip {
+                html: true
+                title: "<span class='text'><strong class='red'>Negative</strong><br>Your essay takes a negative stance overall.</span>"
+            }
+        else if rating > 0
+            $("#tone-input").css "color", "green"
+            $("#tone-container").tooltip {
+                html: true
+                title: "<span class='text'><strong class='green'>Positive</strong><br>Your essay takes a positive stance overall.</span>"
+            }
+        else if rating == 0
+            $("#tone-input").css "color", "#33C3F0"
+            $("#tone-container").tooltip {
+                html: true
+                title: "<span class='text'><strong class='blue'>Neutral</strong><br>Your essay takes a neutral stance overall.</span>"   
+            }
+        
+        $("#tone-input").text rating
+        
 titleShow = (type, num) ->
     if type isnt "co" or "th"
         $(".l#{type}#{num}").css("visibility", "visible")
