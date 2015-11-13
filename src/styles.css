@@ -17,15 +17,19 @@ css
      }
 
      #date-text, .para, .part, .part-label, .btn-primary, .head-input, .toggle-on, .toggle-off, .text {
-       font-size: 3.5vw !important;
+        font-size: 3.5vw !important;
+     }
+     
+     .mobile-hide, .divider-vertical {
+        display: none !important;
+     }
+     
+     .mobile-show {
+        display: inherit !important;
      }
      
      #button-container-child {
          width: 100% !important;
-     }
-     
-     li > .divider-vertical {
-         display: none;
      }
      
      li {
@@ -42,8 +46,12 @@ html, body, .row {
     height: 100%
 }
 
+.mobile-show {
+    display: none;
+}
+
 .container {
-    padding-bottom: 4vh;
+    padding-bottom: 3vh;
 }
 
 #date-text {
@@ -70,7 +78,7 @@ html, body, .row {
     transition: border .5s, box-shadow .5s;
 
     width: 100%;
-    height: 15vh;
+    height: 12vh;
     
     font-size: 12pt;
 
@@ -167,9 +175,13 @@ html, body, .row {
 }
 
 .pacman-scale {
-    transform: scale(0.4,0.4) translateY(-60%)
+    transform: scale(0.4,0.4) translateY(-60%);
 }
 
 #save-text {
     pointer-events: none;
+}
+
+.hide {
+    visibility: hidden;
 }
