@@ -1,0 +1,17 @@
+{
+  "name": "filereader.js",
+  "homepage": "https://github.com/bgrins/filereader.js",
+  "_release": "107f68c3b9",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "107f68c3b99d7ec0f3cba9c0baabfb03067650b5"
+  },
+  "_source": "https://github.com/bgrins/filereader.js.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/bgrins/filereader.js.git",
+  
+  "main": [
+    "filereader.js"
+  ]
+}
