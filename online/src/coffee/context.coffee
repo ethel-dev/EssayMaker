@@ -1,4 +1,5 @@
 $ ->
+    # preview
     $('#preview-toggle').change ->
         if $(this).prop("checked") == true
             # preview essay
@@ -11,7 +12,8 @@ $ ->
             $("#preview").hide(125)
             $("#editor").show(125)
     
-    $(".part, .para").blur ->
+    # sentiment analyzer
+    $(".part, .para").on "blur focus", ->
         essay = "#{$("#th").val()}" + "\r\t#{$("#ts1").val()} #{$("#ex1").val()} #{$("#cs1").val()}\r\t" + "#{$("#ts2").val()} #{$("#ex2").val()} #{$("#cs2").val()}\r\t" + "#{$("#ts3").val()} #{$("#ex3").val()} #{$("#cs3").val()}\r\t" + "#{$("#co").val()}"
         rating = sentiment.analyze(essay).score
         $("#tone-container").tooltip "destroy"
@@ -36,7 +38,7 @@ $ ->
             }
         
         $("#tone-input").text rating
-        
+    
 titleShow = (type, num) ->
     if type isnt "co" or "th"
         $(".l#{type}#{num}").css("visibility", "visible")
