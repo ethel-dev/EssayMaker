@@ -19,5 +19,8 @@
     "sentimood": "~1.1.0",
     "zeroclipboard": "~2.2.0",
     "notifyjs": "~0.3.4"
+  },
+  "devDependencies": {
+    "html5shiv": "~3.7.3"
   }
 }

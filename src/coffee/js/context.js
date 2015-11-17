@@ -14,7 +14,7 @@ $(function() {
       return $("#editor").show(125);
     }
   });
-  return $(".part, .para").blur(function() {
+  return $(".part, .para").on("blur focus", function() {
     var essay, rating;
     essay = ("" + ($("#th").val())) + ("\r\t" + ($("#ts1").val()) + " " + ($("#ex1").val()) + " " + ($("#cs1").val()) + "\r\t") + (($("#ts2").val()) + " " + ($("#ex2").val()) + " " + ($("#cs2").val()) + "\r\t") + (($("#ts3").val()) + " " + ($("#ex3").val()) + " " + ($("#cs3").val()) + "\r\t") + ("" + ($("#co").val()));
     rating = sentiment.analyze(essay).score;

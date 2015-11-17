@@ -19,6 +19,11 @@
     <link rel="stylesheet" href="lib/loaders.css/loaders.css" />
     <!-- endbower -->
     
+    <!-- < IE9 shiv -->
+    <!--[if lt IE 9]>
+      <script src="lib/html5shiv/dist/html5shiv.js"></script>
+    <![endif]-->
+    
     <!-- handwritten and not automatically wired css -->
     <link rel="stylesheet" href="src/styles.css">
   </head>
@@ -77,13 +82,13 @@
           <p id="tone-container">Sentiment Score: <span id="tone-input">Waiting for input...</span></p>
           <ul class="list-inline">
             <li><button class="btn btn-primary" id="save-for-later" onclick="saveEssay()">Save</button></li>
-            <li><button class="btn btn-primary" id="open-from-save" onclick="openEssay()"><div id="save-text" class="loader-inner pacman">Open</div></button></li>
+            <li class="mobile-hide"><button class="btn btn-primary" id="open-from-save" onclick="openEssay()"><div id="save-text" class="loader-inner pacman">Open</div></button></li>
             
-            <li><span class="divider-vertical"></span></li>
+            <li class="mobile-hide"><span class="divider-vertical"></span></li>
             <li><input id="preview-toggle" type="checkbox" data-toggle="toggle" data-on="Previewing" data-off="Editing" data-width="120"></li>
-            <li><span class="divider-vertical"></span></li>
+            <li class="mobile-hide"><span class="divider-vertical"></span></li>
             
-            <li><button class="btn btn-primary" id="save-thot" onclick="saveThot()">Export</button></li>
+            <li class="mobile-hide"><button class="btn btn-primary" id="save-thot" onclick="saveThot()">Export</button></li>
             <li><button class="btn btn-primary" id="copy-thot" onclick="copyThot()">Copy</button></li>
           </ul>
         </div>
@@ -93,8 +98,28 @@
     <div class="hiddenfile">
       <input name="upload" type="file" id="fileinput"/>
     </div>
+    
+    <div class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Your browser is out of date</h4>
+          </div>
+          <div class="modal-body">
+            <p>Your browser is outdated. EssayMaker will try as hard as it can to accomodate you, but some things may not work right or look right.</p>
+            <p>Don't worry, all you have to do is download a new browser, or continue to use EssayMaker, understanding that some features may not work.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Okay, I understand</button>
+            <a href="http://browsehappy.com/" type="button" class="btn btn-primary">Update your browser</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- dependencies -->
+    
     <!-- bower:js -->
     <script src="lib/jquery/dist/jquery.js"></script>
     <script src="lib/FileSaver.js/FileSaver.min.js"></script>
@@ -110,5 +135,18 @@
     <!-- scripts -->
     <script src="src/coffee/js/context.js"></script>
     <script src="src/coffee/js/save.js"></script>
+    
+    <!-- browser warning -->
+    <script src="//browser-update.org/update.min.js"></script>
+    <script> 
+    var $buoop = {vs:{i:12,f:25,o:12.1,s:7},c:2}; 
+    function $buo_f(){ 
+     var e = document.createElement("script"); 
+     e.src = "//browser-update.org/update.min.js"; 
+     document.body.appendChild(e);
+    };
+    try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
+    catch(e){window.attachEvent("onload", $buo_f)}
+    </script>
   </body>
 </html>
