@@ -2,7 +2,7 @@
 css
 */
 
-@import url(http://fonts.googleapis.com/css?family=Inconsolata:400,700);
+@import url(https://fonts.googleapis.com/css?family=Inconsolata:400,700);
 
 @media only screen and (max-device-width: 480px) {
      .col-xs-4, .col-sm-4, .col-md-4 {
@@ -15,46 +15,22 @@ css
        padding-right: 13px;
      }
 
-     #date-text, .para, .part, .part-label, .btn-primary, .head-input, .toggle-on, .toggle-off, .text {
+     #date-text, .para, .part, .part-label, .head-input {
         font-size: 3.5vw !important;
      }
-     
-     .mobile-hide {
-        display: none !important;
-     }
-     
-     .mobile-show {
-        display: inherit !important;
-     }
-     
-     #button-container-child {
-         width: 100% !important;
-     }
-     
+        
      li {
          padding: 0px;
      }
 }
 
-.part-label,  body, .btn-primary, .head-input, #date-text, .text {
+.part-label,  body, .btn-primary, .head-input, #date-text, .toggle-on, .toggle-off, .text {
     font-family: "Inconsolata", monospace !important;
     font-size: 12pt;
 }
 
 html, body, .row {
     height: 100%
-}
-
-.mobile-show {
-    display: none;
-}
-
-.container {
-    padding-bottom: 3vh;
-}
-
-#date-text {
-    padding: 0.5vw;
 }
 
 .head-input {
@@ -89,8 +65,6 @@ html, body, .row {
 .toggle {
     -webkit-transition: border .5s, box-shadow .5s;
             transition: border .5s, box-shadow .5s;
-    border-color: #33C3F0;
-    font-size: 16px !important;
 }
 
 #preview {
@@ -100,48 +74,19 @@ html, body, .row {
 }
 
 .part:focus, .para:focus, .btn-primary:hover, .zeroclipboard-is-hover, .head-input:focus, .toggle:hover {
-    border: 1px solid #17dbdb;
+    border: 1px solid #17dbdb !important;
     box-shadow: 0.5vw 0.1vh 3vh rgba(0,0,0,0.18);
 }
 
-.toggle-on:hover, .btn-primary:hover {
-    background-color: #1EAEDB;
-}
-
-.toggle-on, .btn-primary {
-    background-color: #33C3F0;
+label.btn {
+    border-radius: 0px;
+    border: none;
 }
 
 .btn-primary {
     -webkit-transition: border .5s, box-shadow .5s, -webkit-transform .5s;
 	        transition: border .5s, box-shadow .5s, transform .5s;
     height: 38px;
-    border-color: #33C3F0;
-    text-align: center;
-}
-
-#button-container-child {
-    padding: 0.5% 0;
-    width: 50%;
-    margin: 0 auto;
-    display: block;
-    text-align: center;
-}
-
-.button-container {
-    padding: 0.25% 0;
-    width: 100%;
-}
-
-.divider-vertical {
-    height: 38px;
-    border-left: 1px solid #F2F2F2;
-    border-right: 1px solid #FFF;
-}
-
-.list-inline {
-    margin: 0 auto;
-    display: inline-block;
 }
 
 .hiddenfile {
@@ -181,4 +126,27 @@ html, body, .row {
 
 .hide {
     visibility: hidden;
+}
+
+.item > *, .toggle {
+    width: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.hamburger {
+    transform: rotate(0deg);
+    font-size: 12pt;
+    transition: transform .5s, color .5s, text-shadow .5s;
+}
+
+.hamburger:hover {
+    animation: spin 2s infinite;
+}
+
+@keyframes spin {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
 }

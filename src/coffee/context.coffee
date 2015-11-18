@@ -1,7 +1,7 @@
 $ ->
     # preview
     $('#preview-toggle').change ->
-        if $(this).prop("checked") == true
+        if $(this).prop("checked") != true
             # preview essay
             essay = "#{$("#name").val()}<br>#{$("#date-text").text()}<br>#{$("#title").val()}<br><br>&nbsp;&nbsp;&nbsp;&nbsp;#{$("#th").val()}" + "<br>&nbsp;&nbsp;&nbsp;&nbsp;#{$("#ts1").val()} #{$("#ex1").val()} #{$("#cs1").val()}<br>&nbsp;&nbsp;&nbsp;&nbsp;" + "#{$("#ts2").val()} #{$("#ex2").val()} #{$("#cs2").val()}<br>&nbsp;&nbsp;&nbsp;&nbsp;" + "#{$("#ts3").val()} #{$("#ex3").val()} #{$("#cs3").val()}<br>&nbsp;&nbsp;&nbsp;&nbsp;" + "#{$("#co").val()}"
             $("#preview").html(essay)
@@ -22,19 +22,22 @@ $ ->
             $("#tone-input").css "color", "red"
             $("#tone-container").tooltip {
                 html: true
-                title: "<span class='text'><strong class='red'>Negative</strong><br>Your essay takes a negative stance overall.</span>"
+                placement: "bottom"
+                title: "<span class='text'><small><strong class='red'>Negative</strong><br>Your essay takes a negative stance overall.</small></span>"
             }
         else if rating > 0
             $("#tone-input").css "color", "green"
             $("#tone-container").tooltip {
                 html: true
-                title: "<span class='text'><strong class='green'>Positive</strong><br>Your essay takes a positive stance overall.</span>"
+                placement: "bottom"
+                title: "<span class='text'><small><strong class='green'>Positive</strong><br>Your essay takes a positive stance overall.</small></span>"
             }
         else if rating == 0
             $("#tone-input").css "color", "#33C3F0"
             $("#tone-container").tooltip {
                 html: true
-                title: "<span class='text'><strong class='blue'>Neutral</strong><br>Your essay takes a neutral stance overall.</span>"   
+                placement: "bottom"
+                title: "<span class='text'><small><strong class='blue'>Neutral</strong><br>Your essay takes a neutral stance overall.</small></span>"   
             }
         
         $("#tone-input").text rating

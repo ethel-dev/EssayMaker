@@ -12,13 +12,16 @@
     "FileSaver.js": "https://github.com/eligrey/FileSaver.js.git",
     "blob": "*",
     "bootstrap-toggle": "~2.2.1",
-    "bootstrap": "3.3.4",
     "filereader.js": "https://github.com/bgrins/filereader.js.git",
     "loaders.css": "~0.1.1",
     "marked": "~0.3.5",
     "sentimood": "~1.1.0",
     "zeroclipboard": "~2.2.0",
-    "notifyjs": "~0.3.4"
+    "notifyjs": "~0.3.4",
+    "semantic-ui-sidebar": "~2.1.6",
+    "semantic-ui-menu": "~2.1.6",
+    "jquery": "~2.1.4",
+    "semantic-ui-dropdown": "~2.1.6"
   },
   "devDependencies": {
     "html5shiv": "~3.7.3"
