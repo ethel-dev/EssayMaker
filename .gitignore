@@ -1,0 +1,34 @@
+### @soops' web gitignore file ###
+
+### Bower ###
+bower_components
+.bower-cache
+.bower-registry
+.bower-tmp
+
+### Node ###
+logs
+*.log
+npm-debug.log*
+pids
+*.pid
+*.seed
+lib-cov
+coverage
+.grunt
+.lock-wscript
+build/Release
+
+### Cloud9 (shouts out to my online ide!) ###
+.c9revisions
+.c9
+
+### Linux ###
+*~
+.directory
+.Trash-*
+
+
+### grunt ###
+dist/
+.tmp/
