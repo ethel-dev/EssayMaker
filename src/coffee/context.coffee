@@ -11,13 +11,17 @@ $ ->
         else
             $("#preview").hide(125)
             $("#editor").show(125)
-    
+
     # sentiment analyzer
     $(".part, .para").on "blur focus", ->
-        essay = "#{$("#th").val()}" + "\r\t#{$("#ts1").val()} #{$("#ex1").val()} #{$("#cs1").val()}\r\t" + "#{$("#ts2").val()} #{$("#ex2").val()} #{$("#cs2").val()}\r\t" + "#{$("#ts3").val()} #{$("#ex3").val()} #{$("#cs3").val()}\r\t" + "#{$("#co").val()}"
+        essay = "#{$("#th").val()}" + 
+                "\r\t#{$("#ts1").val()} #{$("#ex1").val()} #{$("#cs1").val()}\r\t" + 
+                "#{$("#ts2").val()} #{$("#ex2").val()} #{$("#cs2").val()}\r\t" + 
+                "#{$("#ts3").val()} #{$("#ex3").val()} #{$("#cs3").val()}\r\t" + "#{$("#co").val()}"
+        
         rating = sentiment.analyze(essay).score
         $("#tone-container").tooltip "destroy"
-        
+
         if rating < 0
             $("#tone-input").css "color", "red"
             $("#tone-container").tooltip {
@@ -39,7 +43,7 @@ $ ->
                 placement: "bottom"
                 title: "<span class='text'><small><strong class='blue'>Neutral</strong><br>Your essay takes a neutral stance overall.</small></span>"   
             }
-        
+
         $("#tone-input").text rating
     
 titleShow = (type, num) ->
@@ -59,7 +63,6 @@ titleShow = (type, num) ->
                 $(".l#{type}1, .l#{type}2").collapse("show")
     else
         $(".l#{type}").collapse("show")
-
 
 titleHide = (type, num) ->
     if type isnt "co" or "th"
