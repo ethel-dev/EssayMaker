@@ -6,6 +6,9 @@ lib
 .bower-registry
 .bower-tmp
 
+### Dist Folder ###
+dist
+
 ### Node ###
 logs
 *.log
