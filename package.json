@@ -3,9 +3,8 @@
   "version": "2.0.0",
   "description": "An online graphical essay organizer.",
   "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-wiredep": "^2.0.0",
-    "coffee-script": "^1.10.0"
+    "coffee-script": "^1.10.0",
+    "gulp": "^3.9.0"
   },
   "repository": {
     "type": "git",
@@ -16,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/soops/EssayMaker/issues"
   },
-  "homepage": "http://getessaymaker.com"
+  "homepage": "http://getessaymaker.com",
+  "dependencies": {
+    "wiredep": "^3.0.0-beta"
+  }
 }

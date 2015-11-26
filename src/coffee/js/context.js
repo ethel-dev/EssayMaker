@@ -5,7 +5,7 @@ $(function() {
   $('#preview-toggle').change(function() {
     var essay;
     if ($(this).prop("checked") !== true) {
-      essay = (($("#name").val()) + "<br>" + ($("#date-text").text()) + "<br>" + ($("#title").val()) + "<br><br>&nbsp;&nbsp;&nbsp;&nbsp;" + ($("#th").val())) + ("<br>&nbsp;&nbsp;&nbsp;&nbsp;" + ($("#ts1").val()) + " " + ($("#ex1").val()) + " " + ($("#cs1").val()) + "<br>&nbsp;&nbsp;&nbsp;&nbsp;") + (($("#ts2").val()) + " " + ($("#ex2").val()) + " " + ($("#cs2").val()) + "<br>&nbsp;&nbsp;&nbsp;&nbsp;") + (($("#ts3").val()) + " " + ($("#ex3").val()) + " " + ($("#cs3").val()) + "<br>&nbsp;&nbsp;&nbsp;&nbsp;") + ("" + ($("#co").val()));
+      essay = marked((($("#name").val()) + "<br>" + ($("#date-text").text()) + "<br>" + ($("#title").val()) + "<br><br>&nbsp;&nbsp;&nbsp;&nbsp;" + ($("#th").val())) + ("<br>&nbsp;&nbsp;&nbsp;&nbsp;" + ($("#ts1").val()) + " " + ($("#ex1").val()) + " " + ($("#cs1").val()) + "<br>&nbsp;&nbsp;&nbsp;&nbsp;") + (($("#ts2").val()) + " " + ($("#ex2").val()) + " " + ($("#cs2").val()) + "<br>&nbsp;&nbsp;&nbsp;&nbsp;") + (($("#ts3").val()) + " " + ($("#ex3").val()) + " " + ($("#cs3").val()) + "<br>&nbsp;&nbsp;&nbsp;&nbsp;") + ("" + ($("#co").val())));
       $("#preview").html(essay);
       $("#editor").hide(125);
       return $("#preview").show(125);

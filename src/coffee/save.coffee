@@ -66,7 +66,7 @@ window.onload = ->
 
   # this date code is some old and messy stuff from another abandoned project, i might change it later
   dateObj = new Date
-  monthno = dateObj.getUTCMonth()
+  monthNo = dateObj.getUTCMonth()
   day = dateObj.getUTCDate()
   year = dateObj.getUTCFullYear()
 
@@ -85,7 +85,7 @@ window.onload = ->
     'December'
   ]
 
-  month = monthNames[monthno]
+  month = monthNames[monthNo]
   d = month + ' ' + day + ', ' + year
   document.getElementById('date-text').innerHTML = d
 

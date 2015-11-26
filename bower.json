@@ -9,6 +9,7 @@
   "homepage": "https://github.com/soops/EssayMaker",
   "moduleType": [],
   "dependencies": {
+    "jquery": "~2.1.4",
     "FileSaver.js": "https://github.com/eligrey/FileSaver.js.git",
     "blob": "*",
     "bootstrap-toggle": "~2.2.1",
@@ -17,13 +18,26 @@
     "marked": "~0.3.5",
     "sentimood": "~1.1.0",
     "zeroclipboard": "~2.2.0",
-    "notifyjs": "~0.3.4",
+    "notifyjs": "*",
     "semantic-ui-sidebar": "~2.1.6",
     "semantic-ui-menu": "~2.1.6",
-    "jquery": "~2.1.4",
     "semantic-ui-dropdown": "~2.1.6"
   },
   "devDependencies": {
     "html5shiv": "~3.7.3"
+  },
+  "overrides": {
+    "FileSaver.js": {
+      "main": "FileSaver.js"
+    },
+    "filereader.js": {
+      "main": "filereader.js"
+    },
+    "semantic-ui-sidebar": {
+      "main": ["sidebar.js", "sidebar.css"]
+    },
+    "semantic-ui-dropdown": {
+      "main": ["dropdown.js", "dropdown.css"]
+    }
   }
 }

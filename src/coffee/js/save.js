@@ -2,7 +2,7 @@
 var copyThot, openEssay, saveEssay, saveHtml, saveText;
 
 window.onload = function() {
-  var d, dateObj, day, month, monthNames, monthno, year;
+  var d, dateObj, day, month, monthNames, monthNo, year;
   window.zclip = new ZeroClipboard(document.getElementById("copy-thot"));
   window.sentiment = new Sentimood();
   window.droptions = {
@@ -57,11 +57,11 @@ window.onload = function() {
     return typeof console !== "undefined" && console !== null ? console.log("ZeroClipboard is ready!") : void 0;
   });
   dateObj = new Date;
-  monthno = dateObj.getUTCMonth();
+  monthNo = dateObj.getUTCMonth();
   day = dateObj.getUTCDate();
   year = dateObj.getUTCFullYear();
   monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-  month = monthNames[monthno];
+  month = monthNames[monthNo];
   d = month + ' ' + day + ', ' + year;
   return document.getElementById('date-text').innerHTML = d;
 };
