@@ -1,0 +1,23 @@
+{
+  "name": "notifyjs",
+  "version": "0.4.0",
+  "homepage": "http://notifyjs.com/",
+  "authors": [
+    "Jaime Pillora <dev@jpillora.com>"
+  ],
+  "description": "A simple, versatile notification library",
+  "main": "dist/notify.js",
+  "keywords": [
+    "notification"
+  ],
+  "license": "MIT",
+  "_release": "0.4.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.4.0",
+    "commit": "3e178c426052bd66c3d3a6de55041c534886ec54"
+  },
+  "_source": "git://github.com/jpillora/notifyjs.git",
+  "_target": "*",
+  "_originalSource": "notifyjs"
+}
