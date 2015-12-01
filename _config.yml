@@ -1,0 +1,28 @@
+# Dependencies
+markdown:         redcarpet
+highlighter:      rouge
+
+gems: [jekyll-paginate, jekyll-gist]
+
+# Permalinks
+permalink:        pretty
+relative_permalinks: false
+
+# Setup
+title:            EssayMaker
+tagline:          "The essay organizer that doesn't suck"
+description:      'An open source graphic essay organizer built from the ground up using web technologies by <a href="http://github.com/soops">@soops</a>'
+url:              http://getessaymaker.com
+baseurl:          /
+
+author:
+  name:           'Ethan Arterberry'
+  url:            http://ethanarterberry.com/
+
+paginate:         5
+
+# Custom vars
+version:          master
+
+github:
+  repo:           https://github.com/soops/EssayMaker

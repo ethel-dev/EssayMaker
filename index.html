@@ -1,61 +1,37 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>EssayMaker by soops</title>
+---
+layout: default
+title: Home
+---
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
-    <meta name="viewport" content="width=device-width">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>EssayMaker</h1>
-        <p>An open source graphic essay organizer built from the ground up using web technologies.</p>
+<div class="posts">
+  {% for post in paginator.posts %}
+  <div class="post">
+    <h1 class="post-title">
+      <a href="{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h1>
 
-        <p class="view"><a href="https://github.com/soops/EssayMaker">View the Project on GitHub <small>soops/EssayMaker</small></a></p>
+    <span class="post-date">{{ post.date | date_to_string }}</span>
 
+    {{ post.content }}
+  </div>
+  {% endfor %}
+</div>
 
-        <ul>
-          <li><a href="https://github.com/soops/EssayMaker/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/soops/EssayMaker/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="http://getessaymaker.com/dist">Open <strong>EssayMaker</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <p>EssayMaker is a much needed update of a very helpful but outdated tool used to help students write essays: the graphical essay organizer. It has all of the speed and features of a word processor, and all of the organization of an organizer. Write your essay in the organizer, and export it as a finished product, ready to share. It's as simple as that.</p>
-
-<h2>
-<a id="platform-friendly" class="anchor" href="#platform-friendly" aria-hidden="true"><span class="octicon octicon-link"></span></a>Platform friendly</h2>
-
-<p>EssayMaker is built on Bootstrap, a mobile first framework. Of course, depending on the browser version you are using some features may not work, I have done everything I can to make EssayMaker as smooth of an experience as possible.</p>
-
-<h2>
-<a id="functional-minimalist-design" class="anchor" href="#functional-minimalist-design" aria-hidden="true"><span class="octicon octicon-link"></span></a>Functional, minimalist design</h2>
-
-<p>EssayMaker is designed with a no eyesore, no clutter philosophy. Nothing is there when you don't need it. Everything is there when you do. While simple, EssayMaker doesn't sacrifice functionality or beauty. EssayMaker is an environment you can focus in and get stuff done in.</p>
-
-<h2>
-<a id="free-and-easy-to-use" class="anchor" href="#free-and-easy-to-use" aria-hidden="true"><span class="octicon octicon-link"></span></a>Free and easy-to-use</h2>
-
-<p>EssayMaker is absolutely free with no paywalls or licenses, no distracting ads, and no popups, because unlike <a href="http://company.king.com/">some people</a> I actually care about the experience of my users. If you're feeling nice, you can donate to my <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=TUFL9KWZGXZE2">PayPal</a>.</p>
-
-<h2>
-<a id="open-source" class="anchor" href="#open-source" aria-hidden="true"><span class="octicon octicon-link"></span></a>Open-source</h2>
-
-<p>Visit EssayMaker on GitHub to request features and report bugs, or even submit a pull request and add your own features.</p>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/soops">soops</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
-  </body>
-</html>
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">Older</a>
+  {% else %}
+    <span class="pagination-item older">Older</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}">Newer</a>
+    {% else %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}">Newer</a>
+    {% endif %}
+  {% else %}
+    <span class="pagination-item newer">Newer</span>
+  {% endif %}
+</div>
