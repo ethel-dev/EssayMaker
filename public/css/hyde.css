@@ -13,6 +13,7 @@
  * https://github.com/poole/hyde.
  */
 
+@import url(https://fonts.googleapis.com/css?family=Inconsolata:400,700);
 
 /*
  * Contents
@@ -32,7 +33,7 @@
  */
 
 html {
-  font-family: monospace;
+  font-family: "Inconsolata", monospace;
 }
 @media (min-width: 48em) {
   html {
@@ -55,7 +56,7 @@ html {
 
 .sidebar {
   text-align: center;
-  padding: 2rem 2rem;
+  padding: 1rem 1rem;
   color: rgba(255,255,255,.5);
   background-color: #202020;
 }
@@ -79,8 +80,8 @@ html {
 .sidebar-about h1 {
   color: #fff;
   margin-top: 0;
-  font-family: monospace;
-  font-size: 2.75rem;
+  font-family: "Inconsolata", monospace;
+  font-size: 2rem;
 }
 
 /* Sidebar nav */
