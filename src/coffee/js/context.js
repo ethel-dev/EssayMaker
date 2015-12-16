@@ -23,21 +23,21 @@ $(function() {
       $("#tone-input").css("color", "red");
       $("#tone-container").tooltip({
         html: true,
-        placement: "bottom",
+        placement: "top",
         title: "<span class='text'><small><strong class='red'>Negative</strong><br>Your essay takes a negative stance overall.</small></span>"
       });
     } else if (rating > 0) {
       $("#tone-input").css("color", "green");
       $("#tone-container").tooltip({
         html: true,
-        placement: "bottom",
+        placement: "top",
         title: "<span class='text'><small><strong class='green'>Positive</strong><br>Your essay takes a positive stance overall.</small></span>"
       });
     } else if (rating === 0) {
       $("#tone-input").css("color", "#33C3F0");
       $("#tone-container").tooltip({
         html: true,
-        placement: "bottom",
+        placement: "top",
         title: "<span class='text'><small><strong class='blue'>Neutral</strong><br>Your essay takes a neutral stance overall.</small></span>"
       });
     }

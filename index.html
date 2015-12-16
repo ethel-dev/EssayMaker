@@ -60,13 +60,19 @@
         <button class="btn btn-primary sidebar-button" id="copy-thot" onclick="copyThot()">Clipboard</button>
       </div>
       <div class="item">
+        <div class="btn-group btn-group-justified" role="group">
+          <a role="button" href="http://getessaymaker.com" class="btn btn-primary sidebar-button" title="Back to the EssayMaker homepage."><span class="glyphicon glyphicon-arrow-left"></span></a>
+          <a role="button" href="https://github.com/soops/EssayMaker/issues/new" class="btn btn-primary sidebar-button" title="Send feedback: report issues, suggest features."><span class="glyphicon glyphicon-edit"></span></a>
+        </div>
+      </div>
+      <div class="item">
         <p class="text text-center" id="tone-container"><strong>Sentiment</strong><br><span id="tone-input" class="text-center">&empty;</span></p>
       </div>
     </div>
     <div class="pusher">
       <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
-          <button class="btn btn-primary navbar-btn" onclick='$(".ui.sidebar").sidebar("toggle");'><i class="glyphicon hamburger glyphicon-menu-hamburger"></i></button>
+          <button class="btn btn-primary navbar-btn" onclick='$(".ui.sidebar").sidebar("toggle");'><span class="glyphicon glyphicon-cog hamburger"></span></button>
         </div>
       </nav>
       <div class="container">

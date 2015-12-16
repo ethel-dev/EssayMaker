@@ -3,6 +3,7 @@ css
 */
 
 @import url(https://fonts.googleapis.com/css?family=Inconsolata:400,700);
+
 @media only screen and (max-device-width: 480px) {
   .col-xs-4, .col-sm-4, .col-md-4 {
     padding-left: 2px;
@@ -13,7 +14,7 @@ css
     padding-right: 13px;
   }
   #date-text, .para, .part, .part-label, .head-input {
-    font-size: 3.5vw !important;
+    font-size: 3.7vw !important;
   }
   li {
     padding: 0px;
@@ -108,7 +109,10 @@ label.btn {
 }
 .hamburger {
   transform: rotate(0deg);
-  font-size: 12pt;
+  width: 100%;
+  height: 100%;
+  font-size: 14pt;
+  text-align: center;
   transition: transform .5s, color .5s, text-shadow .5s;
 }
 .hamburger:hover {
