@@ -11,11 +11,11 @@ mkdir -p dist/src/coffee/js
 
 # copy files to dist
 cp index.html dist/index.html # html
-cp src/favicon.* dist/ # favicon
-cp lib/. dist/lib/ -R # dependencies
-cp src/coffee/js/. dist/src/coffee/js -R # javascript
-cp src/bootstrap/. dist/src/bootstrap/ -R # custom bootstrap
-cp src/styles.css dist/src/styles.css -R # css
+cp src/favicon.* dist/src # favicon
+cp -R lib/ dist/lib/ # dependencies
+cp -R src/coffee/js/ dist/src/coffee/js # javascript
+cp -R src/bootstrap/ dist/src/bootstrap/ # custom bootstrap
+cp -R src/styles.css dist/src/styles.css # css
 
 # minify files inside dist
 gulp distribute
