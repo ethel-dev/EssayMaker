@@ -2,7 +2,7 @@ languages:
     JavaScript: true
 
 exclude_paths:
-- "lib/*"
-- "src/coffee/js/*"
-- "src/bootstrap/*"
-- "src/template.html"
+    - "lib/*"
+    - "src/coffee/js/*"
+    - "src/bootstrap/*"
+    - "src/template.html"
