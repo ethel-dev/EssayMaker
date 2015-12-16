@@ -1,6 +1,7 @@
 # Dependencies
-markdown:         redcarpet
-highlighter:      rouge
+markdown:         redcarpet # WARNING!
+highlighter:      pygments  # IF YOU ARE EDITING JEKYLL IN A LOCAL ENVIRONMENT:
+                            # use the rouge highlighter as pygments is unsupported everywhere but github pages
 
 gems: [jekyll-paginate, jekyll-gist]
 
