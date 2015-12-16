@@ -1,3 +1,6 @@
+# ignore files from bower/npm
+lib
+
 # Ignore docs files
 _gh_pages
 _site
