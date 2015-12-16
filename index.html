@@ -10,9 +10,11 @@
     <meta name="description" content="A graphic essay organizer for the future.">
 
     <title>EssayMaker</title>
-    
+
+    <link rel="icon" href="src/favicon.ico" type="image/png">
+
     <!-- stylesheets -->
-    
+
     <!-- bower:css -->
     <link rel="stylesheet" href="lib/bootstrap-toggle/css/bootstrap-toggle.min.css" />
     <link rel="stylesheet" href="lib/loaders.css/loaders.css" />
@@ -20,15 +22,15 @@
     <link rel="stylesheet" href="lib/semantic-ui-menu/menu.css" />
     <link rel="stylesheet" href="lib/semantic-ui-dropdown/dropdown.css" />
     <!-- endbower -->
-    
+
     <!-- custom bootstrap -->
     <link rel="stylesheet" href="src/bootstrap/css/bootstrap.min.css">
-    
+
     <!-- < IE9 shiv -->
     <!--[if lt IE 9]>
       <script src="lib/html5shiv/dist/html5shiv.js"></script>
     <![endif]-->
-    
+
     <!-- handwritten and not automatically wired css -->
     <link rel="stylesheet" href="src/styles.css">
   </head>
@@ -69,17 +71,17 @@
       </nav>
       <div class="container">
         <div id="preview"></div>
-        
+
         <div id="editor">
           <div class="header">
             <input type="text" placeholder="Name" class="head-input" id="name">
             <input type="text" placeholder="Title" class="head-input" id="title">
             <p id="date-text"></p>
           </div>
-          
+
           <p class="part-label collapse lth">Thesis Paragraph</p>
           <textarea class="para" id="th" onfocus="titleShow('th', '')" onblur="titleHide('lth')" placeholder="The introductory/thesis paragraph accomplishes three purposes: it captures the reader’s interest, it suggests the importance of the essay’s topic, and it ends with a thesis sentence. Often, the thesis sentence states a claim that consists of two or more related points. If the thesis contains multiple points or assertions, each body paragraph should support or justify them, preferably in the order the assertions originally stated in the thesis."></textarea>
-          
+
           <div class="row">
             <div class="col-xs-4 col-sm-4 col-md-4">
               <p class="part-label collapse lts1">Topic Sentence</p>
@@ -110,12 +112,12 @@
         <textarea class="para" id="co" onfocus="titleShow('co', '')" onblur="titleHide('co', '')" placeholder="The concluding paragraph usually restates the thesis and leaves the reader something about the topic to think about. If appropriate, it may also issue a call to act, inviting the reader to take a specific course of action with regard to the points that the essay presented."></textarea>
         </div>
     </div>
-    
+
     <div class="hiddenfile">
       <input name="upload" type="file" id="fileinput"/>
     </div>
     </div>
-    
+
 
     <!-- dependencies -->
 
@@ -131,21 +133,21 @@
     <script src="lib/semantic-ui-sidebar/sidebar.js"></script>
     <script src="lib/semantic-ui-dropdown/dropdown.js"></script>
     <!-- endbower -->
-    
+
     <!-- scripts -->
     <script src="src/coffee/js/context.js"></script>
     <script src="src/coffee/js/save.js"></script>
-    
+
     <!-- custom bootstrap -->
     <script src="src/bootstrap/js/bootstrap.min.js"></script>
-    
+
     <!-- browser warning -->
     <script src="//browser-update.org/update.min.js"></script>
-    <script> 
-    var $buoop = {vs:{i:12,f:25,o:12.1,s:7},c:2}; 
-    function $buo_f(){ 
-     var e = document.createElement("script"); 
-     e.src = "//browser-update.org/update.min.js"; 
+    <script>
+    var $buoop = {vs:{i:12,f:25,o:12.1,s:7},c:2};
+    function $buo_f(){
+     var e = document.createElement("script");
+     e.src = "//browser-update.org/update.min.js";
      document.body.appendChild(e);
     };
     try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
