@@ -34,7 +34,7 @@ gulp and bower are required to be installed on your machine. Clone the
 repository, install dependencies, and run gulp.
 
 ```bash
-git clone https://github.com/trommel/essaymaker.git
+git clone https://github.com/soops/essaymaker.git
 
 # cd into the directory and install dependencies
 cd essaymaker && npm install && gulp setup
