@@ -20,7 +20,7 @@ gulp.task('watch', function() {
 })
 
 // set up wiredep with index.html
-gulp.task('wiredep', function() {
+gulp.task('wiredep', ['bower'], function() {
   gulp.src('index.html')
     .pipe(wiredep({
       optional: 'configuration',
