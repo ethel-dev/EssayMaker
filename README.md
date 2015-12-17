@@ -27,6 +27,21 @@ Installation
 ------------
 EssayMaker runs in a web browser, but can also be downloaded for offline use. A zip file of the standalone version is included in every release. [Get the latest release on GitHub](https://github.com/soops/EssayMaker/releases/latest), or just go to [EssayMaker](http://getessaymaker.com/dist).
 
+Development
+------------
+
+gulp and bower are required to be installed on your machine. Clone the
+repository, install dependencies, and run gulp.
+
+```bash
+git clone https://github.com/soops/essaymaker.git
+
+# cd into the directory and install dependencies
+cd essaymaker && npm install && gulp setup
+
+open index.html
+```
+
 Contribute
 ----------
 - [Contribution guidelines](https://github.com/soops/EssayMaker/blob/master/CONTRIBUTING.md).
