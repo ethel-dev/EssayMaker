@@ -6,7 +6,7 @@ Before you contribute to EssayMaker, fork the `master` branch on GitHub and then
 
 1. Make sure you have Node installed, along with Node Package Manager.
 	- If you don't have those installed, you can do so [here](http://nodejs.org).
-2. Run the `startup.sh` script in the base directory of EssayMaker.
+2. Run the `startup.sh` script in the `shell` directory of EssayMaker.
 	- Generally, this should run in **its own** shell window.
 		- If you close (or otherwise stop) the `startup.sh` file, CoffeeScript will stop watching the `save.coffee` and `context.coffee` files and you will have to compile them manually, which could be a pain, as the specific command used by `startup.sh` to watch CoffeeScript files has all of the required compiler settings correct.
 
@@ -24,7 +24,7 @@ There are also a few important commands available to you when developing for Ess
 
 To **set up** EssayMaker:
 ```shell
-sh startup.sh
+sh shell/startup.sh
 ```
 
 To **watch** CoffeeScript:
