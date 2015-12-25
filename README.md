@@ -31,7 +31,7 @@ Development
 ------------
 
 gulp and bower are required to be installed on your machine. Clone the
-repository, install dependencies, and run gulp.
+repository, install dependencies, and run `gulp setup`.
 
 ```bash
 git clone https://github.com/soops/essaymaker.git
