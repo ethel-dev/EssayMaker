@@ -13,7 +13,7 @@ relative_permalinks: false
 title:            EssayMaker
 tagline:          "The essay organizer that doesn't suck"
 description:      'An open source graphic essay organizer built from the ground up using web technologies by <a href="http://github.com/soops">@soops</a>'
-url:              http://soops.github.io
+url:              http://soops.github.io/EssayMaker
 baseurl:          /
 
 author:
