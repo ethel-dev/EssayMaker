@@ -13,12 +13,12 @@ relative_permalinks: false
 title:            EssayMaker
 tagline:          "The essay organizer that doesn't suck"
 description:      'An open source graphic essay organizer built from the ground up using web technologies by <a href="http://github.com/soops">@soops</a>'
-url:              http://getessaymaker.com
+url:              http://soops.github.io
 baseurl:          /
 
 author:
   name:           'Ethan Arterberry'
-  url:            http://ethanarterberry.com/
+  url:            http://soops.github.io
 
 paginate:         5
 
